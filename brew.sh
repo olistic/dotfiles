@@ -18,27 +18,20 @@ brew install moreutils
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
-# Install Bash 4.
+# Install Zsh 5.
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 # running `chsh`.
-brew install bash
-brew tap homebrew/versions
-brew install bash-completion2
+brew install zsh
+brew install zsh-completions
 
-# Switch to using brew-installed bash as default shell
-if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
-  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
-  chsh -s /usr/local/bin/bash;
+# Switch to using brew-installed zsh as default shell.
+if ! fgrep -q '/usr/local/bin/zsh' /etc/shells; then
+  echo '/usr/local/bin/zsh' | sudo tee -a /etc/shells;
+  chsh -s /usr/local/bin/zsh;
 fi;
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
-
-# Install RingoJS and Narwhal.
-# Note that the order in which these are installed is important;
-# see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
 
 # Install more recent versions of some macOS tools.
 brew install vim --with-override-system-vi
