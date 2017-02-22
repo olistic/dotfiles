@@ -71,10 +71,10 @@ for option in autocd extendedglob; do
   setopt $option 2> /dev/null;
 done;
 
-# nvm
+# nvm.
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
-# Pure prompt
+# Pure prompt.
 autoload -U promptinit; promptinit
 prompt pure
