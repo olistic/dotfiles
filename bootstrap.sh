@@ -21,6 +21,7 @@ if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt;
 else
 	if read -q \?"This may overwrite existing files in your home directory. Are you sure? (y/n) "; then
+		echo "";
 		doIt;
 	fi;
 fi;
