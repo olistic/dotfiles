@@ -64,6 +64,14 @@ When setting up a new Mac, you may want to install some common [Homebrew](http:/
 ./brew.sh
 ```
 
+### Install Cask native apps
+
+When setting up a new Mac, you may want to install some [Cask](http://brew.sh/) native apps (after installing Homebrew, of course):
+
+```bash
+./cask.sh
+```
+
 ## Thanks to…
 
 * [Mathias Bynens](https://mathiasbynens.be/) and his [dotfiles repository](https://github.com/mathiasbynens/dotfiles)

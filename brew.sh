@@ -30,8 +30,8 @@ if ! fgrep -q '/usr/local/bin/zsh' /etc/shells; then
   chsh -s /usr/local/bin/zsh;
 fi;
 
-# Install `wget` with IRI support.
-brew install wget --with-iri
+# Install `wget`.
+brew install wget
 
 # Install more recent versions of some macOS tools.
 brew install vim --with-override-system-vi
@@ -93,6 +93,9 @@ brew install tree
 brew install vbindiff
 brew install webkit2png
 brew install zopfli
+
+# Install nvm
+brew install nvm
 
 # Remove outdated versions from the cellar.
 brew cleanup
