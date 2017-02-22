@@ -140,6 +140,10 @@
 	# Use `hexdump` to diff binary files
 	textconv = hexdump -v -C
 
+[gpg]
+
+	program = gpg2
+
 [help]
 
 	# Automatically correct and execute mistyped commands
@@ -158,6 +162,10 @@
 	default = matching
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
+
+[user]
+
+	signingkey = 186CE25D243BBE89
 
 # URL shorthands
 

@@ -14,4 +14,5 @@ brew cask install google-chrome
 brew cask install google-chrome-canary
 brew cask install hyper
 brew cask install java
+brew cask install slack
 brew cask install xquartz

@@ -18,9 +18,12 @@ brew install moreutils
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
+
+# Install GnuPG v2.
+brew install gnupg2
+brew install pinentry-mac
+
 # Install Zsh 5.
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-# running `chsh`.
 brew install zsh
 brew install zsh-completions
 
