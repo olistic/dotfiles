@@ -1,5 +1,3 @@
-export PATH=$(brew --prefix coreutils)/libexec/gnubin:$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/oli/.oh-my-zsh
 
@@ -58,7 +56,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Load the shell dotfiles, and then some:
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{exports,aliases,extra}; do
+for file in ~/.{path,exports,aliases,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
