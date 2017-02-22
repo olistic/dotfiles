@@ -18,4 +18,5 @@ brew cask install java
 brew cask install paw
 brew cask install slack
 brew cask install spotify
+brew cask install whatsapp
 brew cask install xquartz
