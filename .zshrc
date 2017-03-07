@@ -57,7 +57,7 @@ source $ZSH/oh-my-zsh.sh
 # Load the shell dotfiles, and then some:
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in ~/.{path,exports,aliases,extra}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
 
@@ -70,6 +70,14 @@ setopt appendhistory;
 for option in autocd extendedglob; do
   setopt $option 2> /dev/null;
 done;
+
+# Virtualenv.
+# pip should only run if there is a virtualenv currently activated.
+export PIP_REQUIRE_VIRTUALENV=true
+
+function gpip() {
+  PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
 
 # nvm.
 export NVM_DIR="$HOME/.nvm"

@@ -97,7 +97,11 @@ brew install vbindiff
 brew install webkit2png
 brew install zopfli
 
-# Install nvm
+# Install Python.
+brew install python
+brew install python3
+
+# Install nvm.
 brew install nvm
 
 # Remove outdated versions from the cellar.
