@@ -72,6 +72,8 @@ for option in autocd extendedglob; do
 done;
 
 # Virtualenv.
+source /usr/local/bin/virtualenvwrapper.sh
+
 # pip should only run if there is a virtualenv currently activated.
 export PIP_REQUIRE_VIRTUALENV=true
 

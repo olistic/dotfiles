@@ -35,3 +35,7 @@ export ARCHFLAGS="-arch x86_64";
 
 # SSH.
 export SSH_KEY_PATH="~/.ssh/rsa_id";
+
+# virtualenvwrapper setup.
+export WORKON_HOME=~/.virtualenvs
+export PROJECT_HOME=~/Projects
