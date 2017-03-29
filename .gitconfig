@@ -134,6 +134,8 @@
 
 	# Detect copies as well as renames
 	renames = copies
+	# Enable improved diff algorithm
+	indentHeuristic = true
 
 [diff "bin"]
 
