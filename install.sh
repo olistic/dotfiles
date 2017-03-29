@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
-# Install command-line tools and applications using Homebrew and Cask.
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+###############################################################################
+# Install native apps and command-line tools using Homebrew and Cask.         #
+###############################################################################
 
 # Install Homebrew if not installed.
 if ! which brew > /dev/null; then
@@ -19,7 +27,24 @@ brew bundle
 # Remove outdated versions from the cellar.
 brew cleanup
 
-# Install Oh My Zsh.
+###############################################################################
+# Node.js                                                                     #
+###############################################################################
+
+# Install latest node
+nvm install node
+
+###############################################################################
+# Python                                                                      #
+###############################################################################
+
+# Install virtualenv
+pip install virtualenv
+pip install virtualenvwrapper
+
+###############################################################################
+# Oh My Zsh                                                                   #
+###############################################################################
 
 # Switch to using brew-installed zsh as default shell.
 if ! fgrep -q '/usr/local/bin/zsh' /etc/shells; then
@@ -31,3 +56,6 @@ fi;
 if [ ! -d ~/.oh-my-zsh ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";
 fi;
+
+# Install pure prompt
+yarn add global pure-prompt
