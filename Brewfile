@@ -1,4 +1,35 @@
-# Install command-line tools using Homebrew.
+###############################################################################
+# Native apps                                                                 #
+###############################################################################
+
+# Get Cask.
+tap 'caskroom/cask'
+tap 'caskroom/versions'
+
+# Install web browsers.
+cask 'google-chrome'
+cask 'google-chrome-canary'
+
+# Install developer tools.
+cask 'atom'
+cask 'hyper'
+cask 'paw'
+cask 'visual-studio-code'
+
+# Install productivity tools.
+cask 'screenhero'
+cask 'skype'
+cask 'slack'
+
+# Install other useful stuff.
+cask 'java'
+cask 'spotify'
+cask 'whatsapp'
+cask 'xquartz'
+
+###############################################################################
+# Command-line tools                                                          #
+###############################################################################
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -24,9 +55,11 @@ brew 'wget'
 
 # Install more recent versions of some macOS tools.
 brew 'vim', args: ['with-override-system-vi']
+tap 'homebrew/dupes'
 brew 'homebrew/dupes/grep'
 #brew 'homebrew/dupes/openssh'
 brew 'homebrew/dupes/screen'
+tap 'homebrew/php'
 brew 'homebrew/php/php56', args: ['with-gmp']
 
 # Install font tools.
@@ -90,28 +123,5 @@ brew 'python3'
 # Install nvm.
 brew 'nvm'
 
-# Get Cask.
-tap 'caskroom/cask'
-tap 'caskroom/versions'
-
-# Install web browsers.
-cask 'google-chrome'
-cask 'google-chrome-canary'
-
-# Install developer tools.
-cask 'atom'
-cask 'docker'
-cask 'hyper'
-cask 'paw'
-cask 'visual-studio-code'
-
-# Install productivity tools.
-cask 'screenhero'
-cask 'skype'
-cask 'slack'
-
-# Install other useful stuff.
-cask 'java'
-cask 'spotify'
-cask 'whatsapp'
-cask 'xquartz'
+# Install yarn.
+brew 'yarn', args: ['ignore-dependencies']
