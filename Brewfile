@@ -113,6 +113,7 @@ brew 'ssh-copy-id'
 brew 'testssl'
 brew 'tree'
 brew 'vbindiff'
+brew 'watchman'
 brew 'webkit2png'
 brew 'zopfli'
 
