@@ -13,6 +13,10 @@ export NODE_REPL_MODE='sloppy';
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8';
 
+# virtualenvwrapper setup.
+export WORKON_HOME=~/.virtualenvs;
+export PROJECT_HOME=~/Projects;
+
 # Increase Zsh history size. Allow 32³ entries; the default is 1000.
 export HISTFILE=~/.histfile
 export HISTSIZE='32768';
@@ -26,13 +30,12 @@ export LC_ALL='en_US.UTF-8';
 
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}";
-
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
 
 # Compilation flags.
 export ARCHFLAGS="-arch x86_64";
 
-# virtualenvwrapper setup.
-export WORKON_HOME=~/.virtualenvs;
-export PROJECT_HOME=~/Projects;
+# Avoid issues with `gpg` as installed via Homebrew.
+# https://stackoverflow.com/a/42265848/96656
+export GPG_TTY=$(tty);
