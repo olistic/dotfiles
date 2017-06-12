@@ -55,10 +55,9 @@ brew 'wget'
 
 # Install more recent versions of some macOS tools.
 brew 'vim', args: ['with-override-system-vi']
-tap 'homebrew/dupes'
-brew 'homebrew/dupes/grep'
-#brew 'homebrew/dupes/openssh'
-brew 'homebrew/dupes/screen'
+brew 'homebrew/grep'
+#brew 'homebrew/openssh'
+brew 'homebrew/screen'
 tap 'homebrew/php'
 brew 'homebrew/php/php56', args: ['with-gmp']
 
