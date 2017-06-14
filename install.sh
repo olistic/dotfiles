@@ -40,7 +40,6 @@ nvm install node
 
 # Install virtualenv
 pip install virtualenv
-pip install virtualenvwrapper
 
 ###############################################################################
 # Oh My Zsh                                                                   #

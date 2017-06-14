@@ -71,8 +71,9 @@ for option in autocd extendedglob; do
   setopt $option 2> /dev/null;
 done;
 
-# Virtualenv.
-source /usr/local/bin/virtualenvwrapper.sh
+# pyenv.
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # pip should only run if there is a virtualenv currently activated.
 export PIP_REQUIRE_VIRTUALENV=true

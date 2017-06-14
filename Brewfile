@@ -120,6 +120,10 @@ brew 'zopfli'
 brew 'python'
 brew 'python3'
 
+# Install pyenv
+brew 'pyenv'
+brew 'pyenv-virtualenv'
+
 # Install nvm.
 brew 'nvm'
 
