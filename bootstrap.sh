@@ -1,8 +1,8 @@
 #!/usr/bin/env zsh
 
-cd "$(dirname "${BASH_SOURCE}")";
+cd "$(dirname "${BASH_SOURCE}")"
 
-git pull origin master;
+git pull origin master &> /dev/null
 
 doIt() {
   rsync \
@@ -14,19 +14,19 @@ doIt() {
     --exclude "macos.sh" \
     --exclude "README.md" \
     --exclude "LICENSE-MIT.txt" \
-    -avh --no-perms . ~;
+    -avh --no-perms . ~
 
-  source ~/.zshrc;
+  source ~/.zshrc
 }
 
 if [[ "$1" == "-f" ]]; then
-  doIt;
+  doIt
 else
-  echo -n "This may overwrite existing files in your home directory. Are you sure? (y/n) ";
-  read -k 1 overwrite;
+  echo -n "This may overwrite existing files in your home directory. Are you sure? (y/n) "
+  read -k 1 overwrite
   if [[ "$overwrite" =~ ^[Yy]$ ]]; then
-    echo "";
-    doIt;
-  fi;
-fi;
-unset doIt;
+    echo ""
+    doIt
+  fi
+fi
+unset doIt
