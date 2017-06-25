@@ -116,9 +116,5 @@ brew 'watchman'
 brew 'webkit2png'
 brew 'zopfli'
 
-# Install pyenv
-brew 'pyenv'
-brew 'pyenv-virtualenv'
-
 # Install yarn.
 brew 'yarn', args: ['ignore-dependencies']
