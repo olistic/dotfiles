@@ -71,6 +71,10 @@ for option in autocd extendedglob; do
   setopt $option 2> /dev/null;
 done;
 
+# nvm.
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 # pyenv.
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
@@ -81,10 +85,6 @@ export PIP_REQUIRE_VIRTUALENV=true
 function gpip() {
   PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
-
-# nvm.
-export NVM_DIR="$HOME/.nvm"
-source $(brew --prefix nvm)/nvm.sh
 
 # Pure prompt.
 autoload -U promptinit; promptinit

@@ -31,6 +31,12 @@ brew cleanup
 # Node.js                                                                     #
 ###############################################################################
 
+# Install nvm if not installed.
+if [ ! -d ~/.nvm ]; then
+  git clone https://github.com/creationix/nvm.git ~/.nvm
+  (cd ~/.nvm && git checkout v0.33.2)
+fi
+
 # Install latest node
 nvm install node
 
