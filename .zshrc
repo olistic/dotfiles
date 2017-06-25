@@ -71,6 +71,12 @@ for option in autocd extendedglob; do
   setopt $option 2> /dev/null;
 done;
 
+# Initialize the prompt system.
+autoload -U promptinit; promptinit
+
+# Use pure prompt.
+prompt pure
+
 # nvm.
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
@@ -85,7 +91,3 @@ export PIP_REQUIRE_VIRTUALENV=true
 function gpip() {
   PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
-
-# Pure prompt.
-autoload -U promptinit; promptinit
-prompt pure

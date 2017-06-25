@@ -48,7 +48,7 @@ nvm install node
 pip install virtualenv
 
 ###############################################################################
-# Oh My Zsh                                                                   #
+# Shell                                                                       #
 ###############################################################################
 
 # Switch to using brew-installed zsh as default shell.
@@ -62,5 +62,9 @@ if [ ! -d ~/.oh-my-zsh ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";
 fi;
 
-# Install pure prompt
-yarn add global pure-prompt
+# Install pure prompt if not installed.
+if [ ! -d ~/.pure ]; then
+  git clone https://github.com/sindresorhus/pure.git ~/.pure
+  ln -s ~/.pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
+  ln -s ~/.pure/async.zsh /usr/local/share/zsh/site-functions/async
+fi
