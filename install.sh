@@ -73,4 +73,4 @@ if [ ! -d ~/.pure ]; then
 fi
 
 # Install dotfiles.
-set -- -f; source bootstrap.sh
+./bootstrap.sh -f
