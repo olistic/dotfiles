@@ -71,6 +71,10 @@ for option in autocd extendedglob; do
   setopt $option 2> /dev/null;
 done;
 
+# nvm.
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 # pyenv.
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
