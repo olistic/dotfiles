@@ -124,8 +124,5 @@ brew 'python3'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
 
-# Install nvm.
-brew 'nvm'
-
 # Install yarn.
 brew 'yarn', args: ['ignore-dependencies']

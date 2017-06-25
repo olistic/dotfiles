@@ -82,10 +82,6 @@ function gpip() {
   PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
 
-# nvm.
-export NVM_DIR="$HOME/.nvm"
-source $(brew --prefix nvm)/nvm.sh
-
 # Pure prompt.
 autoload -U promptinit; promptinit
 prompt pure
