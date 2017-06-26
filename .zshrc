@@ -77,6 +77,11 @@ autoload -U promptinit; promptinit
 # Use pure prompt.
 prompt pure
 
+# Use GNU coreutils with normal names.
+
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
 # Node.js
 
 # nvm.
