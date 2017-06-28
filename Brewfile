@@ -116,5 +116,6 @@ brew 'watchman'
 brew 'webkit2png'
 brew 'zopfli'
 
-# Install yarn.
-brew 'yarn', args: ['ignore-dependencies']
+# Install Node.js and yarn.
+brew 'node'
+brew 'yarn'
