@@ -12,9 +12,9 @@ cask 'google-chrome-canary'
 
 # Install developer tools.
 cask 'atom'
+cask 'docker'
 cask 'hyper'
 cask 'paw'
-cask 'visual-studio-code'
 
 # Install productivity tools.
 cask 'screenhero'
