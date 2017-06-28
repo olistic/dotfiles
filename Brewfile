@@ -119,3 +119,7 @@ brew 'zopfli'
 # Install Node.js and yarn.
 brew 'node'
 brew 'yarn'
+
+# Install Python.
+brew 'python'
+brew 'python3'
