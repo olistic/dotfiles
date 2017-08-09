@@ -133,6 +133,11 @@
 	# https://help.github.com/articles/signing-commits-using-gpg/
 	gpgsign = true
 
+[credential]
+
+	# Use the OSX Keychain to store the GitHub password
+	helper = osxkeychain
+
 [diff]
 
 	# Detect copies as well as renames
@@ -144,6 +149,14 @@
 
 	# Use `hexdump` to diff binary files
 	textconv = hexdump -v -C
+
+[fetch]
+
+	prune = true
+
+[gpg]
+
+	program = gpg2
 
 [help]
 
@@ -160,14 +173,9 @@
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
-[credential]
+[rebase]
 
-	# Use the OSX Keychain to store the GitHub password
-	helper = osxkeychain
-
-[gpg]
-
-	program = gpg2
+	autosquash = true
 
 # URL shorthands
 
