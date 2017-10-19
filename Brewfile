@@ -42,8 +42,8 @@ brew 'findutils'
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew 'gnu-sed', args: ['with-default-names']
 
-# Install GnuPG v2.
-brew 'gnupg2'
+# Install GnuPG.
+brew 'gnupg'
 brew 'pinentry-mac'
 
 # Install Zsh 5.
