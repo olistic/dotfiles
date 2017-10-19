@@ -8,7 +8,7 @@ tap 'caskroom/versions'
 
 # Install web browsers.
 cask 'google-chrome'
-cask 'google-chrome-canary'
+cask 'firefox'
 
 # Install developer tools.
 cask 'atom'
