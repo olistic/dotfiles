@@ -15,16 +15,15 @@ cask 'atom'
 cask 'docker'
 cask 'hyper'
 cask 'paw'
+cask 'visual-studio-code'
 
 # Install productivity tools.
-cask 'screenhero'
-cask 'skype'
+cask 'microsoft-office'
 cask 'slack'
 
 # Install other useful stuff.
 cask 'java'
 cask 'spotify'
-cask 'whatsapp'
 cask 'xquartz'
 
 ###############################################################################
