@@ -1,1 +1,4 @@
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+
+# Add brew's python executable to PATH
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
