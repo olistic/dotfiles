@@ -94,7 +94,6 @@ brew 'xz'
 
 # Install other useful binaries.
 brew 'ack'
-brew 'dark-mode'
 #brew 'exiv2'
 brew 'git'
 brew 'git-lfs'
@@ -106,13 +105,10 @@ brew 'pigz'
 brew 'pv'
 brew 'rename'
 brew 'rhino'
-brew 'speedtest_cli'
 brew 'ssh-copy-id'
-brew 'testssl'
 brew 'tree'
 brew 'vbindiff'
 brew 'watchman'
-brew 'webkit2png'
 brew 'zopfli'
 
 # Install Node.js and yarn.
