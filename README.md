@@ -10,7 +10,7 @@ $ git clone https://github.com/olistic/dotfiles.git
 
 ### Homebrew formulae and Oh My Zsh!
 
-When setting up a new Mac, you may want to start by installing some common [Homebrew](http://brew.sh/) formulae and [Cask](http://brew.sh/) native apps.
+When setting up a new Mac, you may want to start by installing some common [Homebrew](https://brew.sh/) formulae and [Cask](https://brew.sh/) native apps.
 
 The installation script will install Homebrew with everything inside of `Brewfile`, as well as Oh My Zsh!
 
