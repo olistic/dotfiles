@@ -44,12 +44,6 @@ fi
 # Install virtualenv.
 pip install virtualenv
 
-# Install pyenv and pyenv-virtualenv if not installed.
-if [ ! -d ~/.pyenv ]; then
-  git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-  git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
-fi
-
 ###############################################################################
 # Shell                                                                       #
 ###############################################################################
