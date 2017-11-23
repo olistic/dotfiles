@@ -111,9 +111,8 @@ brew 'vbindiff'
 brew 'watchman'
 brew 'zopfli'
 
-# Install Node.js and yarn.
-brew 'node'
-brew 'yarn'
+# Install yarn.
+brew 'yarn', args: ['ignore-dependencies']
 
 # Install Python.
 brew 'python'
