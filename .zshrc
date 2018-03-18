@@ -88,8 +88,9 @@ MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use
 
-alias node='unalias node; unalias npm; nvm use default; node $@'
-alias npm='unalias node; unalias npm; nvm use default; npm $@'
+alias node='unalias node; unalias npm; unalias yarn; nvm use default; node $@'
+alias npm='unalias node; unalias npm; unalias yarn; nvm use default; npm $@'
+alias yarn='unalias node; unalias npm; unalias yarn; nvm use default; yarn $@'
 
 # Python
 
