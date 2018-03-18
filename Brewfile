@@ -112,5 +112,5 @@ brew 'zopfli'
 brew 'yarn', args: ['without-node']
 
 # Install Python.
+brew 'python@2'
 brew 'python'
-brew 'python3'
