@@ -109,7 +109,7 @@ brew 'watchman'
 brew 'zopfli'
 
 # Install yarn.
-brew 'yarn', args: ['ignore-dependencies']
+brew 'yarn', args: ['without-node']
 
 # Install Python.
 brew 'python'
