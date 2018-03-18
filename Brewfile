@@ -11,14 +11,11 @@ cask 'google-chrome'
 cask 'firefox'
 
 # Install developer tools.
-cask 'atom'
-cask 'docker'
 cask 'hyper'
 cask 'paw'
 cask 'visual-studio-code'
 
 # Install productivity tools.
-cask 'microsoft-office'
 cask 'slack'
 
 # Install other useful stuff.
