@@ -54,8 +54,8 @@ brew 'vim', args: ['with-override-system-vi']
 brew 'grep'
 #brew 'openssh'
 brew 'screen'
-tap 'homebrew/php'
-brew 'homebrew/php/php56', args: ['with-gmp']
+brew 'php'
+brew 'gmp'
 
 # Install font tools.
 tap 'bramstein/webfonttools'
