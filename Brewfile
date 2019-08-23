@@ -94,6 +94,7 @@ brew 'ack'
 #brew 'exiv2'
 brew 'git'
 brew 'git-lfs'
+brew 'gs'
 brew 'imagemagick', args: ['with-webp']
 brew 'lua'
 brew 'lynx'
