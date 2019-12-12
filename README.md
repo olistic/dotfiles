@@ -26,6 +26,16 @@ The bootstrapper script will pull in the latest version and copy the dotfiles to
 $ source bootstrap.sh
 ```
 
+### Specify the `$PATH`
+
+If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/olistic/dotfiles/blob/9b71a58e23f8732dcd3ceb31ea4464696d599eeb/.aliases#L19-L26)) takes place.
+
+Here’s an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
+
+```bash
+export PATH="/usr/local/bin:$PATH"
+```
+
 ### Add custom commands
 
 If `~/.extra` exists, it will be sourced along with the other files. You can use this to add commands you don’t want to commit to a public repository.
@@ -55,4 +65,4 @@ $ ./macos.sh
 
 ## Thanks to…
 
-* [Mathias Bynens](https://mathiasbynens.be/) and his original [dotfiles repository](https://github.com/mathiasbynens/dotfiles).
+- [Mathias Bynens](https://mathiasbynens.be/) and his original [dotfiles repository](https://github.com/mathiasbynens/dotfiles).
