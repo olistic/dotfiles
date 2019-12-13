@@ -108,9 +108,6 @@ brew 'vbindiff'
 brew 'watchman'
 brew 'zopfli'
 
-# Install yarn.
-brew 'yarn'
-
 # Install Python.
 brew 'python@2'
 brew 'python'

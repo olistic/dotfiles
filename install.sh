@@ -47,6 +47,17 @@ else
   )
 fi
 
+# Load nvm.
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Install and use latest release of Node.js.
+nvm install node && nvm use node
+
+# Install Yarn if not installed.
+if ! which yarn > /dev/null; then
+  curl -o- -L https://yarnpkg.com/install.sh | bash
+fi
+
 ###############################################################################
 # Shell                                                                       #
 ###############################################################################
