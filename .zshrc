@@ -93,14 +93,6 @@ alias node='unalias node; unalias npm; unalias yarn; nvm use; node $@'
 alias npm='unalias node; unalias npm; unalias yarn; nvm use; npm $@'
 alias yarn='unalias node; unalias npm; unalias yarn; nvm use; yarn $@'
 
-# Python.
-
-# pip should only run if there is a virtualenv currently activated.
-export PIP_REQUIRE_VIRTUALENV=true
-gpip() {
-  PIP_REQUIRE_VIRTUALENV="" pip "$@"
-}
-
 # React Native.
 
 # Android.
