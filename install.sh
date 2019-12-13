@@ -12,8 +12,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Install Homebrew if not installed.
 if ! which brew > /dev/null; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
-fi;
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -34,16 +34,16 @@ brew cleanup
 # Install nvm if not installed or upgrade it.
 NVM_DIR="$HOME/.nvm"
 if [ ! -d "$NVM_DIR" ]; then
-  git clone https://github.com/creationix/nvm.git "$NVM_DIR"
+  git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
   (
     cd "$NVM_DIR"
-    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin`
+    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
   )
 else
   (
     cd "$NVM_DIR"
-    git fetch origin
-    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin`
+    git fetch --tags origin
+    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
   )
 fi
 
