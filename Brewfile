@@ -3,12 +3,11 @@
 ###############################################################################
 
 # Get Cask.
-tap 'caskroom/cask'
-tap 'caskroom/versions'
+tap 'homebrew/cask-versions'
 
 # Install web browsers.
-cask 'google-chrome'
 cask 'firefox'
+cask 'google-chrome'
 
 # Install developer tools.
 cask 'hyper'
@@ -35,8 +34,8 @@ brew 'coreutils'
 brew 'moreutils'
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew 'findutils'
-# Install GNU `sed`, overwriting the built-in `sed`.
-brew 'gnu-sed', args: ['with-default-names']
+# Install GNU `sed`, `g`-prefixed.
+brew 'gnu-sed'
 
 # Install GnuPG.
 brew 'gnupg'
@@ -50,7 +49,7 @@ brew 'zsh-completions'
 brew 'wget'
 
 # Install more recent versions of some macOS tools.
-brew 'vim', args: ['with-override-system-vi']
+brew 'vim'
 brew 'grep'
 #brew 'openssh'
 brew 'screen'
@@ -95,7 +94,7 @@ brew 'ack'
 brew 'git'
 brew 'git-lfs'
 brew 'gs'
-brew 'imagemagick', args: ['with-webp']
+brew 'imagemagick'
 brew 'lua'
 brew 'lynx'
 brew 'p7zip'
@@ -110,7 +109,7 @@ brew 'watchman'
 brew 'zopfli'
 
 # Install yarn.
-brew 'yarn', args: ['without-node']
+brew 'yarn'
 
 # Install Python.
 brew 'python@2'
