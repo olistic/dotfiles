@@ -51,18 +51,12 @@ fi
 # Shell                                                                       #
 ###############################################################################
 
-# Switch to using brew-installed zsh as default shell.
-if ! fgrep -q '/usr/local/bin/zsh' /etc/shells; then
-  echo '/usr/local/bin/zsh' | sudo tee -a /etc/shells;
-  chsh -s /usr/local/bin/zsh;
-fi
-
 # Install Oh My Zsh if not installed.
 OH_MY_ZSH_DIR="$HOME/.oh-my-zsh"
 if [ ! -d "$OH_MY_ZSH_DIR" ]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 else
-  env ZSH="$ZSH" sh "$ZSH/tools/upgrade.sh"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/upgrade.sh)"
 fi
 
 # Install pure prompt if not installed.
