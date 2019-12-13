@@ -2,3 +2,6 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 
 # Add brew's python executable to PATH
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+# Add Visual Studio Code (code) to PATH
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
