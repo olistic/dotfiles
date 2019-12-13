@@ -41,6 +41,9 @@
 	# Interactive rebase with the given number of latest commits
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
 
+	# Fixup the currently staged files with the given commit
+	fixup = "!f() { git commit --fixup $1 && GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash $1^; }; f"
+
 	# Remove the old tag with this name and tag the latest commit with it.
 	retag = "!r() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; r"
 
