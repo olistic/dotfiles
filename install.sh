@@ -60,20 +60,18 @@ else
 fi
 
 # Install pure prompt if not installed.
-PURE_DIR="$HOME/.pure"
+PURE_DIR="$HOME/.zsh/pure"
 if [ ! -d "$PURE_DIR" ]; then
   git clone https://github.com/sindresorhus/pure.git "$PURE_DIR"
   (
     cd "$PURE_DIR"
-    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin`
+    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
   )
-  ln -s "$PURE_DIR/pure.zsh" /usr/local/share/zsh/site-functions/prompt_pure_setup
-  ln -s "$PURE_DIR/async.zsh" /usr/local/share/zsh/site-functions/async
 else
   (
     cd "$PURE_DIR"
-    git fetch origin
-    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin`
+    git fetch --tags origin
+    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
   )
 fi
 

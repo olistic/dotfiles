@@ -71,6 +71,9 @@ for option in autocd extendedglob; do
   setopt $option 2> /dev/null;
 done;
 
+# Make pure prompt available to Zsh.
+fpath+=("$HOME/.zsh/pure")
+
 # Initialize the prompt system.
 autoload -U promptinit; promptinit
 
