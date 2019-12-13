@@ -80,11 +80,6 @@ autoload -U promptinit; promptinit
 # Use pure prompt.
 prompt pure
 
-# Use GNU coreutils with normal names.
-
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-
 # Node.js.
 
 # nvm.
@@ -95,12 +90,3 @@ export NVM_DIR="$HOME/.nvm"
 alias node='unalias node; unalias npm; unalias yarn; nvm use; node $@'
 alias npm='unalias node; unalias npm; unalias yarn; nvm use; npm $@'
 alias yarn='unalias node; unalias npm; unalias yarn; nvm use; yarn $@'
-
-# React Native.
-
-# Android.
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
