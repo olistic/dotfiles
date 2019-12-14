@@ -22,7 +22,7 @@ brew update
 brew upgrade
 
 # Install from Brewfile.
-brew bundle
+brew bundle --no-lock
 
 # Remove outdated versions from the cellar.
 brew cleanup
