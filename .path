@@ -4,12 +4,6 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
-# Add Yarn to PATH.
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-# Add brew's python executable to PATH.
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-
 # Add Visual Studio Code (code) to PATH.
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
