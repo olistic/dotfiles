@@ -2,25 +2,32 @@
 # Native apps                                                                 #
 ###############################################################################
 
-# Get Cask.
+# Get alternate versions of Casks.
 tap 'homebrew/cask-versions'
 
 # Install web browsers.
 cask 'firefox'
 cask 'google-chrome'
+cask 'google-chrome-canary'
 
 # Install developer tools.
 cask 'hyper'
-cask 'paw'
+cask 'insomnia'
 cask 'visual-studio-code'
 
 # Install productivity tools.
+cask 'discord'
 cask 'slack'
 
+# Install messaging apps.
+cask 'signal'
+cask 'telegram'
+cask 'whatsapp'
+
 # Install other useful stuff.
-cask 'java'
+cask '1password'
 cask 'spotify'
-cask 'xquartz'
+cask 'transmission'
 
 ###############################################################################
 # Command-line tools                                                          #
@@ -90,7 +97,6 @@ brew 'xz'
 
 # Install other useful binaries.
 brew 'ack'
-#brew 'exiv2'
 brew 'git'
 brew 'git-lfs'
 brew 'gs'
@@ -101,13 +107,8 @@ brew 'p7zip'
 brew 'pigz'
 brew 'pv'
 brew 'rename'
-brew 'rhino'
 brew 'ssh-copy-id'
 brew 'tree'
 brew 'vbindiff'
 brew 'watchman'
 brew 'zopfli'
-
-# Install Python.
-brew 'python@2'
-brew 'python'
