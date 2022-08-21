@@ -12,7 +12,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Install Homebrew if not installed.
 if ! which brew > /dev/null; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.github.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Make sure we’re using the latest Homebrew.
@@ -53,10 +53,8 @@ fi
 # Install and use latest release of Node.js.
 nvm install node && nvm use node
 
-# Install Yarn if not installed.
-if ! which yarn > /dev/null; then
-  curl -o- -L https://yarnpkg.com/install.sh | bash
-fi
+# Enable corepack.
+corepack enable
 
 ###############################################################################
 # Shell                                                                       #
@@ -65,9 +63,9 @@ fi
 # Install Oh My Zsh if not installed.
 OH_MY_ZSH_DIR="$HOME/.oh-my-zsh"
 if [ ! -d "$OH_MY_ZSH_DIR" ]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 else
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/upgrade.sh)"
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/upgrade.sh)"
 fi
 
 # Install pure prompt if not installed.
