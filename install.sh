@@ -15,6 +15,9 @@ if ! which brew > /dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.github.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+# Make Homebrew installation available.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Make sure we’re using the latest Homebrew.
 brew update
 

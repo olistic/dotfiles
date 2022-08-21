@@ -71,6 +71,9 @@ for option in autocd extendedglob; do
   setopt $option 2> /dev/null;
 done;
 
+# Make Homebrew installation available.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Make pure prompt available to Zsh.
 fpath+=("$HOME/.zsh/pure")
 
