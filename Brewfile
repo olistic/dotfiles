@@ -7,6 +7,7 @@ tap 'homebrew/cask-versions'
 
 # Install web browsers.
 cask 'firefox'
+cask 'firefox-developer-edition'
 cask 'google-chrome'
 cask 'google-chrome-canary'
 
