@@ -113,3 +113,8 @@ brew 'tree'
 brew 'vbindiff'
 brew 'watchman'
 brew 'zopfli'
+
+# Install languages.
+brew 'python'
+brew 'ruby'
+brew 'rust'
