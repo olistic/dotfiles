@@ -7,6 +7,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 
 # Install web browsers.
+cask 'brave-browser'
 cask 'firefox'
 cask 'firefox-developer-edition'
 cask 'google-chrome'
@@ -19,18 +20,16 @@ cask 'visual-studio-code'
 
 # Install productivity tools.
 cask 'discord'
+cask 'loom'
 cask 'slack'
-
-# Install messaging apps.
-cask 'signal'
-cask 'telegram'
-cask 'whatsapp'
+cask 'zoom'
 
 # Install other useful stuff.
 cask '1password'
+cask 'little-snitch'
+cask 'nordvpn'
 cask 'raycast'
 cask 'spotify'
-cask 'transmission'
 
 # Install fonts.
 cask 'font-fira-code'

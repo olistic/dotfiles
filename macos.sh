@@ -774,7 +774,6 @@ for app in "Activity Monitor" \
 	"Safari" \
 	"SystemUIServer" \
 	"Terminal" \
-	"Transmission" \
 	"cfprefsd" \
 	"iCal"; do
 	killall "${app}" &> /dev/null
