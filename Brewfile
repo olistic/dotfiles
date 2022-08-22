@@ -2,7 +2,8 @@
 # Native apps                                                                 #
 ###############################################################################
 
-# Get alternate versions of Casks.
+# Add more formulae.
+tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 
 # Install web browsers.
@@ -27,8 +28,12 @@ cask 'whatsapp'
 
 # Install other useful stuff.
 cask '1password'
+cask 'raycast'
 cask 'spotify'
 cask 'transmission'
+
+# Install fonts.
+cask 'font-fira-code'
 
 ###############################################################################
 # Command-line tools                                                          #
