@@ -7,6 +7,9 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 # Add Visual Studio Code (code) to PATH.
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
+# Add Python to PATH.
+export PATH="/opt/homebrew/opt/python/libexec/bin:$PATH"
+
 # Add Android-related stuff to PATH.
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
