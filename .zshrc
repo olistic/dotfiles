@@ -90,6 +90,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use # Postpone using nvm.
 
 # Lazy load nvm.
-alias node='unalias node; unalias npm; unalias yarn; nvm use; node $@'
-alias npm='unalias node; unalias npm; unalias yarn; nvm use; npm $@'
-alias yarn='unalias node; unalias npm; unalias yarn; nvm use; yarn $@'
+alias node='unalias node; unalias npm; unalias pnpm; unalias yarn; nvm use; node $@'
+alias npm='unalias node; unalias npm; unalias pnpm; unalias yarn; nvm use; npm $@'
+alias pnpm='unalias node; unalias npm; unalias pnpm; unalias yarn; nvm use; pnpm $@'
+alias yarn='unalias node; unalias npm; unalias pnpm; unalias yarn; nvm use; yarn $@'
