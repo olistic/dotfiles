@@ -122,4 +122,4 @@ brew 'zopfli'
 # Install languages.
 brew 'python'
 brew 'ruby'
-brew 'rust'
+brew 'rustup'

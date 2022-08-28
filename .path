@@ -10,6 +10,9 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 # Add Python to PATH.
 export PATH="/opt/homebrew/opt/python/libexec/bin:$PATH"
 
+# Add Rust to PATH.
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Add Android-related stuff to PATH.
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
