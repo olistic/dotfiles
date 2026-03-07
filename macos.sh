@@ -703,14 +703,12 @@ for app in "Activity Monitor" \
 	"Dock" \
 	"Finder" \
 	"Google Chrome" \
-	"Google Chrome Canary" \
 	"Mail" \
 	"Messages" \
 	"Photos" \
 	"Safari" \
 	"SystemUIServer" \
 	"Terminal" \
-	"Transmission" \
 	"cfprefsd" \
 	"iCal"; do
 	killall "${app}" &> /dev/null
