@@ -74,9 +74,6 @@ done;
 # Make Homebrew installation available.
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Make pure prompt available to Zsh.
-fpath+=("$HOME/.zsh/pure")
-
 # Initialize the prompt system.
 autoload -U promptinit; promptinit
 
@@ -88,3 +85,10 @@ prompt pure
 # nvm.
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# Rust.
+
+. "$HOME/.cargo/env"
+
+# Java.
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home

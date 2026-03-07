@@ -1,17 +1,9 @@
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 
-# Add Python to PATH.
-export PATH="$PATH:/opt/homebrew/opt/python/libexec/bin"
+# Solana.
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 
-# Add Rust to PATH.
-export PATH="$PATH:$HOME/.cargo/bin"
-
-# Add Visual Studio Code (code) to PATH.
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
-# Add Android-related stuff to PATH.
+# Android.
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$PATH:$ANDROID_HOME/emulator"
-export PATH="$PATH:$ANDROID_HOME/tools"
-export PATH="$PATH:$ANDROID_HOME/tools/bin"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
