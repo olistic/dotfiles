@@ -78,21 +78,5 @@ else
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/upgrade.sh)"
 fi
 
-# Install pure prompt if not installed.
-PURE_DIR="$HOME/.zsh/pure"
-if [ ! -d "$PURE_DIR" ]; then
-  git clone https://github.com/sindresorhus/pure.git "$PURE_DIR"
-  (
-    cd "$PURE_DIR"
-    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
-  )
-else
-  (
-    cd "$PURE_DIR"
-    git fetch --tags origin
-    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
-  )
-fi
-
 # Install dotfiles.
 ./bootstrap.sh -f
