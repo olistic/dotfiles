@@ -171,8 +171,8 @@
 
 [help]
 
-	# Automatically correct and execute mistyped commands
-	autocorrect = 1
+	# Prompt before executing corrected mistyped commands
+	autocorrect = prompt
 
 [init]
 
