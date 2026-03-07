@@ -66,17 +66,5 @@ corepack enable
 # Use rustup to install the Rust compiler (rustc) and the Rust package manager (cargo).
 rustup-init -y --no-modify-path
 
-###############################################################################
-# Shell                                                                       #
-###############################################################################
-
-# Install Oh My Zsh if not installed.
-OH_MY_ZSH_DIR="$HOME/.oh-my-zsh"
-if [ ! -d "$OH_MY_ZSH_DIR" ]; then
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-else
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/upgrade.sh)"
-fi
-
 # Install dotfiles.
 ./bootstrap.sh -f
