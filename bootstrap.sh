@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-cd "$(dirname "${BASH_SOURCE}")"
+cd "$(dirname "${0}")"
 
 git pull origin master &> /dev/null
 
