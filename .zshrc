@@ -7,6 +7,10 @@ unset file;
 
 # Append to the Zsh history file, rather than overwriting it.
 setopt appendhistory;
+# Share history across all sessions.
+setopt sharehistory;
+# Remove older duplicate entries from history.
+setopt hist_ignore_all_dups;
 
 # Enable some Zsh features:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`.
