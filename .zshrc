@@ -18,6 +18,9 @@ done;
 # Make Homebrew installation available.
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Initialize the completion system.
+autoload -Uz compinit; compinit
+
 # Initialize the prompt system.
 autoload -U promptinit; promptinit
 
