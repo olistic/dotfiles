@@ -1,20 +1,40 @@
 #!/usr/bin/env zsh
 
-cd "$(dirname "${0}")"
+DOTFILES_DIR="$(cd "$(dirname "${0}")" && pwd)"
 
-git pull origin master &> /dev/null
+# Files and directories to symlink to ~.
+SYMLINKS=(
+  .aliases
+  .curlrc
+  .editorconfig
+  .exports
+  .gitconfig
+  .gitignore
+  .gnupg
+  .nvmrc
+  .path
+  .ssh
+  .vim
+  .vimrc
+  .wgetrc
+  .zshrc
+)
 
 doIt() {
-  rsync \
-    --exclude ".git/" \
-    --exclude ".DS_Store" \
-    --exclude "Brewfile" \
-    --exclude "bootstrap.sh" \
-    --exclude "install.sh" \
-    --exclude "macos.sh" \
-    --exclude "README.md" \
-    --exclude "LICENSE-MIT.txt" \
-    -avh --no-perms . ~
+  for item in "${SYMLINKS[@]}"; do
+    target="$DOTFILES_DIR/$item"
+    link="$HOME/$item"
+
+    # Remove existing file/directory (but not if it's already the correct symlink).
+    if [[ -e "$link" || -L "$link" ]]; then
+      if [[ -L "$link" && "$(readlink "$link")" == "$target" ]]; then
+        continue
+      fi
+      rm -rf "$link"
+    fi
+
+    ln -sv "$target" "$link"
+  done
 
   source ~/.zshrc
 }
@@ -22,7 +42,7 @@ doIt() {
 if [[ "$1" == "-f" ]]; then
   doIt
 else
-  echo -n "This may overwrite existing files in your home directory. Are you sure? (y/n) "
+  echo -n "This will replace dotfiles in your home directory with symlinks. Are you sure? (y/n) "
   read -k 1 overwrite
   if [[ "$overwrite" =~ ^[Yy]$ ]]; then
     echo ""
