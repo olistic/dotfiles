@@ -20,7 +20,7 @@ SYMLINKS=(
   .zshrc
 )
 
-doIt() {
+do_it() {
   for item in "${SYMLINKS[@]}"; do
     target="$DOTFILES_DIR/$item"
     link="$HOME/$item"
@@ -40,13 +40,13 @@ doIt() {
 }
 
 if [[ "$1" == "-f" ]]; then
-  doIt
+  do_it
 else
   echo -n "This will replace dotfiles in your home directory with symlinks. Are you sure? (y/n) "
   read -k 1 overwrite
   if [[ "$overwrite" =~ ^[Yy]$ ]]; then
     echo ""
-    doIt
+    do_it
   fi
 fi
-unset doIt
+unset do_it
