@@ -137,6 +137,9 @@
 	# Detect copies as well as renames
 	renames = copies
 
+	# Use histogram algorithm for better diffs
+	algorithm = histogram
+
 [diff "bin"]
 
 	# Use `hexdump` to diff binary files
