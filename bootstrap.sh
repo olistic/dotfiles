@@ -21,6 +21,8 @@ SYMLINKS=(
 # Files to symlink inside directories that hold runtime state (keys, caches).
 # These directories must not be symlinked wholesale.
 DIR_SYMLINKS=(
+  .claude/CLAUDE.md
+  .claude/settings.json
   .gnupg/gpg-agent.conf
   .ssh/config
 )
