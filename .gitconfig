@@ -178,6 +178,7 @@
 [rebase]
 
 	autosquash = true
+	autoStash = true
 
 # URL shorthands
 
