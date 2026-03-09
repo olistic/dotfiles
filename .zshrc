@@ -27,6 +27,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Initialize the completion system.
 autoload -Uz compinit; compinit
 
+# Case-insensitive completion.
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 # Initialize the prompt system.
 autoload -U promptinit; promptinit
 
