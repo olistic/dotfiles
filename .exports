@@ -15,9 +15,6 @@ export PYTHONIOENCODING='UTF-8';
 export HISTFILE=~/.histfile
 export HISTSIZE='32768';
 export SAVEHIST="${HISTSIZE}";
-# Omit duplicates and commands that begin with a space from history.
-setopt hist_ignore_dups;
-setopt hist_ignore_space;
 
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8';

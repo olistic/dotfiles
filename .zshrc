@@ -11,6 +11,8 @@ setopt append_history;
 setopt share_history;
 # Remove older duplicate entries from history.
 setopt hist_ignore_all_dups;
+# Omit commands that begin with a space from history.
+setopt hist_ignore_space;
 
 # Enable some Zsh features:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`.
