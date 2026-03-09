@@ -10,30 +10,40 @@ SYMLINKS=(
   .exports
   .gitconfig
   .gitignore
-  .gnupg
   .nvmrc
   .path
-  .ssh
   .vim
   .vimrc
   .wgetrc
   .zshrc
 )
 
+# Files to symlink inside directories that hold runtime state (keys, caches).
+# These directories must not be symlinked wholesale.
+DIR_SYMLINKS=(
+  .gnupg/gpg-agent.conf
+  .ssh/config
+)
+
+symlink() {
+  local target="$1" link="$2"
+
+  if [[ -L "$link" && "$(readlink "$link")" == "$target" ]]; then
+    return
+  fi
+
+  [[ -e "$link" || -L "$link" ]] && rm -rf "$link"
+  ln -sv "$target" "$link"
+}
+
 do_it() {
   for item in "${SYMLINKS[@]}"; do
-    target="$DOTFILES_DIR/$item"
-    link="$HOME/$item"
+    symlink "$DOTFILES_DIR/$item" "$HOME/$item"
+  done
 
-    # Remove existing file/directory (but not if it's already the correct symlink).
-    if [[ -e "$link" || -L "$link" ]]; then
-      if [[ -L "$link" && "$(readlink "$link")" == "$target" ]]; then
-        continue
-      fi
-      rm -rf "$link"
-    fi
-
-    ln -sv "$target" "$link"
+  for item in "${DIR_SYMLINKS[@]}"; do
+    mkdir -p "$HOME/$(dirname "$item")"
+    symlink "$DOTFILES_DIR/$item" "$HOME/$item"
   done
 
   source ~/.zshrc
