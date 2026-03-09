@@ -6,9 +6,9 @@ done;
 unset file;
 
 # Append to the Zsh history file, rather than overwriting it.
-setopt appendhistory;
+setopt append_history;
 # Share history across all sessions.
-setopt sharehistory;
+setopt share_history;
 # Remove older duplicate entries from history.
 setopt hist_ignore_all_dups;
 
