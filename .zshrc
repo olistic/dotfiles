@@ -41,13 +41,14 @@ prompt pure
 # nvm (lazy-loaded for faster shell startup).
 export NVM_DIR="$HOME/.nvm"
 nvm() {
-  unset -f nvm node npm npx
+  unset -f nvm node npm npx pnpm
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
   nvm "$@"
 }
 node() { unset -f node; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; node "$@"; }
 npm() { unset -f npm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; npm "$@"; }
 npx() { unset -f npx; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; npx "$@"; }
+pnpm() { unset -f pnpm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; pnpm "$@"; }
 
 # Rust.
 
