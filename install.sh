@@ -59,6 +59,9 @@ nvm install node && nvm use node
 # Enable corepack.
 corepack enable
 
+# Install TypeScript language server.
+npm install -g typescript-language-server typescript
+
 ###############################################################################
 # Rust                                                                        #
 ###############################################################################
@@ -75,8 +78,15 @@ if ! which uv > /dev/null; then
   curl -LsSf https://astral.sh/uv/install.sh | UV_NO_MODIFY_PATH=1 sh
 fi
 
-# Install iTerm2 CLI (required for Claude Code agent team split panes).
+# Install Python language server.
+uv tool install pyright
+
+# Install other tools.
 uv tool install it2
+
+###############################################################################
+# Dotfiles                                                                    #
+###############################################################################
 
 # Install dotfiles.
 ./bootstrap.sh -f
