@@ -1,4 +1,4 @@
-# Olistic's dotfiles
+# olistic's dotfiles
 
 ## Installation
 
@@ -26,6 +26,22 @@ The bootstrapper script will symlink the dotfiles to your home folder.
 source bootstrap.sh
 ```
 
+### SSH key
+
+Generate an Ed25519 SSH key and add it to GitHub for both authentication and commit signing:
+
+```bash
+ssh-keygen -t ed25519 -C "your@email.com"
+gh ssh-key add ~/.ssh/id_ed25519.pub --title "my-mac (auth)" --type authentication
+gh ssh-key add ~/.ssh/id_ed25519.pub --title "my-mac (signing)" --type signing
+```
+
+Create `~/.ssh/allowed_signers` for local signature verification:
+
+```
+your@email.com ssh-ed25519 AAAA...
+```
+
 ### Local git config
 
 The shared `.gitconfig` uses `[include]` to pull in `~/.gitconfig.local` for user identity and other machine-specific settings. Create this file on each machine:
@@ -34,7 +50,7 @@ The shared `.gitconfig` uses `[include]` to pull in `~/.gitconfig.local` for use
 [user]
 	name = Your Name
 	email = your@email.com
-	signingkey = YOUR_GPG_KEY_ID
+	signingkey = ~/.ssh/id_ed25519.pub
 ```
 
 ### Specify the `$PATH`
