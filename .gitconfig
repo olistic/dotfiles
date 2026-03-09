@@ -186,3 +186,7 @@
 
 	insteadOf = "gh:"
 
+[include]
+
+	# Local/private config (not tracked in the repo)
+	path = ~/.gitconfig.local
