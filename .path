@@ -1,5 +1,8 @@
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 
+# Python uv tools.
+export PATH="$HOME/.local/bin:$PATH"
+
 # Solana.
 export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 

@@ -66,5 +66,17 @@ corepack enable
 # Use rustup to install the Rust compiler (rustc) and the Rust package manager (cargo).
 rustup-init -y --no-modify-path
 
+###############################################################################
+# Python tools                                                                #
+###############################################################################
+
+# Install uv if not installed.
+if ! which uv > /dev/null; then
+  curl -LsSf https://astral.sh/uv/install.sh | UV_NO_MODIFY_PATH=1 sh
+fi
+
+# Install iTerm2 CLI (required for Claude Code agent team split panes).
+uv tool install it2
+
 # Install dotfiles.
 ./bootstrap.sh -f

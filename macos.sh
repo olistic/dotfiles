@@ -677,6 +677,13 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
 
 ###############################################################################
+# iTerm2                                                                      #
+###############################################################################
+
+# Enable the Python API (required for Claude Code agent team split panes)
+defaults write com.googlecode.iterm2 EnableAPIServer -bool true
+
+###############################################################################
 # Google Chrome                                                               #
 ###############################################################################
 
