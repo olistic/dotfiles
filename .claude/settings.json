@@ -32,7 +32,10 @@
     "pyright-lsp@claude-plugins-official": true,
     "rust-analyzer-lsp@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
-    "typescript-lsp@claude-plugins-official": true
+    "typescript-lsp@claude-plugins-official": true,
+    "figma@claude-plugins-official": true,
+    "vercel@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true
   },
   "fastMode": true,
   "teammateMode": "tmux"
