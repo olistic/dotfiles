@@ -153,6 +153,10 @@
 
 	format = ssh
 
+[gpg "ssh"]
+
+	allowedSignersFile = ~/.ssh/allowed_signers
+
 [help]
 
 	# Prompt before executing corrected mistyped commands
