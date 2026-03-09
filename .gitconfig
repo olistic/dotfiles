@@ -151,7 +151,7 @@
 
 [gpg]
 
-	program = gpg
+	format = ssh
 
 [help]
 
