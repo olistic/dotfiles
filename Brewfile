@@ -36,6 +36,9 @@ cask 'keybase'
 cask 'little-snitch'
 cask 'nordvpn'
 
+# Install fonts.
+cask 'font-jetbrains-mono-nerd-font'
+
 # Install other useful stuff.
 cask '1password'
 cask 'macwhisper'
