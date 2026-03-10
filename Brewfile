@@ -41,8 +41,6 @@ cask '1password'
 cask 'macwhisper'
 cask 'spotify'
 
-# Install Java.
-cask 'zulu@17'
 
 ###############################################################################
 # Command-line tools                                                          #
@@ -124,6 +122,8 @@ brew 'lynx'
 brew 'p7zip'
 brew 'pigz'
 brew 'poppler'
+brew 'mise'
+brew 'uv'
 brew 'pure'
 brew 'pv'
 brew 'redis'
@@ -138,9 +138,3 @@ brew 'zopfli'
 # Install mobile development tools.
 brew 'cocoapods'
 brew 'fastlane'
-
-###############################################################################
-# Cargo                                                                       #
-###############################################################################
-
-cargo 'avm'

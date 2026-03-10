@@ -11,7 +11,6 @@ SYMLINKS=(
   .gitconfig
   .gitignore
   .hushlogin
-  .nvmrc
   .path
   .vim
   .vimrc

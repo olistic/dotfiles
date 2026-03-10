@@ -12,7 +12,7 @@ git clone https://github.com/olistic/dotfiles.git
 
 When setting up a new Mac, you may want to start by installing some common [Homebrew](https://brew.sh/) formulae, casks, and VS Code extensions.
 
-The installation script will install Homebrew with everything inside of `Brewfile`, set up Node.js (via nvm), and install Rust (via rustup).
+The installation script will install Homebrew with everything inside of `Brewfile`, and set up runtimes (Node.js, Python, Rust, Java) via [mise](https://mise.jdx.dev).
 
 ```bash
 ./install.sh

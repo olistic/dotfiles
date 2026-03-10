@@ -11,7 +11,7 @@
 - `.gitconfig` — shared git config, uses `[include]` for `~/.gitconfig.local`
 - `.gitconfig.local` — machine-specific git identity and signing key (not tracked)
 - `bootstrap.sh` — symlinks dotfiles to `~`
-- `install.sh` — installs Homebrew, Brewfile, nvm, Node.js, Rust
+- `install.sh` — installs Homebrew, Brewfile, runtimes via mise
 - `macos.sh` — macOS defaults
 
 ## Conventions

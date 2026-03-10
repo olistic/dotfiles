@@ -31,30 +31,11 @@ brew bundle --no-lock
 brew cleanup
 
 ###############################################################################
-# Node.js                                                                     #
+# Node.js (via mise)                                                          #
 ###############################################################################
 
-# Install nvm if not installed or upgrade it.
-NVM_DIR="$HOME/.nvm"
-if [ ! -d "$NVM_DIR" ]; then
-  git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
-  (
-    cd "$NVM_DIR"
-    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
-  )
-else
-  (
-    cd "$NVM_DIR"
-    git fetch --tags origin
-    git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
-  )
-fi
-
-# Load nvm.
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
 # Install and use latest release of Node.js.
-nvm install node && nvm use node
+mise use --global node@latest
 
 # Enable corepack.
 corepack enable
@@ -63,26 +44,34 @@ corepack enable
 npm install -g typescript-language-server typescript
 
 ###############################################################################
-# Rust                                                                        #
+# Python (via mise)                                                           #
 ###############################################################################
 
-# Use rustup to install the Rust compiler (rustc) and the Rust package manager (cargo).
-rustup-init -y --no-modify-path
-
-###############################################################################
-# Python tools                                                                #
-###############################################################################
-
-# Install uv if not installed.
-if ! which uv > /dev/null; then
-  curl -LsSf https://astral.sh/uv/install.sh | UV_NO_MODIFY_PATH=1 sh
-fi
+# Install and use latest release of Python.
+mise use --global python@latest
 
 # Install Python language server.
 uv tool install pyright
 
 # Install other tools.
 uv tool install it2
+
+###############################################################################
+# Rust (via mise)                                                             #
+###############################################################################
+
+# Install and use latest release of Rust.
+mise use --global rust@latest
+
+# Install Rust language server.
+cargo install rust-analyzer
+
+###############################################################################
+# Java (via mise)                                                             #
+###############################################################################
+
+# Install and use latest release of Java.
+mise use --global java@zulu-17
 
 ###############################################################################
 # Dotfiles                                                                    #

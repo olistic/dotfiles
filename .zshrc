@@ -40,23 +40,5 @@ prompt pure
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Node.js.
-
-# nvm (lazy-loaded for faster shell startup).
-export NVM_DIR="$HOME/.nvm"
-nvm() {
-  unset -f nvm node npm npx pnpm
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-  nvm "$@"
-}
-node() { unset -f node; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; node "$@"; }
-npm() { unset -f npm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; npm "$@"; }
-npx() { unset -f npx; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; npx "$@"; }
-pnpm() { unset -f pnpm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; pnpm "$@"; }
-
-# Rust.
-
-. "$HOME/.cargo/env"
-
-# Java.
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+# Activate mise (manages Node.js, Python, Rust, Java, etc.).
+eval "$(mise activate zsh)"
