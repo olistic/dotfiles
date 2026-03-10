@@ -69,6 +69,10 @@ If `~/.extra` exists, it will be sourced along with the other files. You can use
 
 You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It's probably better to [fork this repository](https://github.com/olistic/dotfiles/fork) instead, though.
 
+### Terminal font
+
+Set your terminal font to **JetBrainsMono Nerd Font** for Starship prompt icons and ligatures. In iTerm2: Settings > Profiles > Text > Font.
+
 ### Sensible macOS defaults
 
 When setting up a new Mac, you may also want to set some sensible macOS defaults:
