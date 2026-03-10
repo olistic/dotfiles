@@ -107,6 +107,7 @@ brew 'bat'
 brew 'delta'
 brew 'eza'
 brew 'fd'
+brew 'fzf'
 brew 'jq'
 brew 'ripgrep'
 

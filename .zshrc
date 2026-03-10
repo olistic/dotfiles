@@ -40,5 +40,11 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # Activate mise (manages Node.js, Python, Rust, Java, etc.).
 eval "$(mise activate zsh)"
 
+# Initialize fzf (fuzzy finder: Ctrl+T files, Ctrl+R history, Alt+C dirs).
+source <(fzf --zsh)
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND='fd --type d --hidden --exclude .git'
+
 # Initialize zoxide (smarter cd).
 eval "$(zoxide init zsh)"
