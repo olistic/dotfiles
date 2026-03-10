@@ -66,7 +66,9 @@ brew 'pinentry-mac'
 
 # Install Zsh 5.
 brew 'zsh'
+brew 'zsh-autosuggestions'
 brew 'zsh-completions'
+brew 'zsh-syntax-highlighting'
 
 # Install `wget`.
 brew 'wget'
@@ -109,6 +111,14 @@ brew 'tcptrace'
 brew 'ucspi-tcp' # `tcpserver` etc.
 brew 'xpdf'
 brew 'xz'
+
+# Install modern CLI replacements.
+brew 'bat'
+brew 'delta'
+brew 'eza'
+brew 'fd'
+brew 'jq'
+brew 'ripgrep'
 
 # Install other useful binaries.
 brew 'ack'
