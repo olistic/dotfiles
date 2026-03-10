@@ -10,6 +10,7 @@ SYMLINKS=(
   .exports
   .gitconfig
   .gitignore
+  .hushlogin
   .nvmrc
   .path
   .vim
