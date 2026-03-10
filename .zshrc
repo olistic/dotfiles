@@ -36,6 +36,10 @@ autoload -U promptinit; promptinit
 # Use pure prompt.
 prompt pure
 
+# Zsh plugins.
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Node.js.
 
 # nvm (lazy-loaded for faster shell startup).
