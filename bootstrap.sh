@@ -23,6 +23,7 @@ SYMLINKS=(
 DIR_SYMLINKS=(
   .claude/CLAUDE.md
   .claude/settings.json
+  .config/starship.toml
   .gnupg/gpg-agent.conf
   .ssh/config
 )

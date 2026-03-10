@@ -30,11 +30,8 @@ autoload -Uz compinit; compinit
 # Case-insensitive completion.
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
-# Initialize the prompt system.
-autoload -U promptinit; promptinit
-
-# Use pure prompt.
-prompt pure
+# Initialize the prompt.
+eval "$(starship init zsh)"
 
 # Zsh plugins.
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh

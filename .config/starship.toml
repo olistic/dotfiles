@@ -1,0 +1,45 @@
+# Minimal prompt inspired by Pure.
+# https://starship.rs/config
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$line_break\
+$character"""
+
+right_format = """
+$nodejs\
+$rust\
+$python\
+$java\
+$cmd_duration"""
+
+[directory]
+style = "blue"
+
+[git_branch]
+style = "gray"
+
+[git_status]
+style = "red"
+
+[character]
+success_symbol = "[>](purple)"
+error_symbol = "[>](red)"
+
+[cmd_duration]
+min_time = 5_000
+style = "yellow"
+
+[nodejs]
+style = "green"
+
+[rust]
+style = "red"
+
+[python]
+style = "yellow"
+
+[java]
+style = "red"
