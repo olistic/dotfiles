@@ -15,7 +15,6 @@ cask 'cursor'
 cask 'docker-desktop'
 cask 'iterm2'
 cask 'postman'
-cask 'visual-studio-code'
 
 # Install productivity tools.
 cask 'caffeine'
@@ -139,21 +138,6 @@ brew 'zopfli'
 # Install mobile development tools.
 brew 'cocoapods'
 brew 'fastlane'
-
-###############################################################################
-# VS Code extensions                                                          #
-###############################################################################
-
-vscode 'bradlc.vscode-tailwindcss'
-vscode 'dbaeumer.vscode-eslint'
-vscode 'eamodio.gitlens'
-vscode 'editorconfig.editorconfig'
-vscode 'esbenp.prettier-vscode'
-vscode 'github.copilot'
-vscode 'github.copilot-chat'
-vscode 'github.github-vscode-theme'
-vscode 'prisma.prisma'
-vscode 'tyriar.sort-lines'
 
 ###############################################################################
 # Cargo                                                                       #
