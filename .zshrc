@@ -39,3 +39,6 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # Activate mise (manages Node.js, Python, Rust, Java, etc.).
 eval "$(mise activate zsh)"
+
+# Initialize zoxide (smarter cd).
+eval "$(zoxide init zsh)"

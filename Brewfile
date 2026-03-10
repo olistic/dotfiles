@@ -134,6 +134,7 @@ brew 'tree'
 brew 'vbindiff'
 brew 'watchman'
 brew 'zopfli'
+brew 'zoxide'
 
 # Install mobile development tools.
 brew 'cocoapods'
