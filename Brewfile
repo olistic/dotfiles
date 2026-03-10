@@ -80,12 +80,6 @@ brew 'screen'
 brew 'php'
 brew 'gmp'
 
-# Install font tools.
-tap 'bramstein/webfonttools'
-brew 'sfnt2woff'
-brew 'sfnt2woff-zopfli'
-brew 'woff2'
-
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew 'aircrack-ng'
 brew 'bfg'
@@ -96,7 +90,6 @@ brew 'dex2jar'
 brew 'dns2tcp'
 brew 'fcrackzip'
 brew 'foremost'
-brew 'hashpump'
 brew 'hydra'
 brew 'john'
 brew 'knock'
