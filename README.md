@@ -67,14 +67,6 @@ When setting up a new Mac, you may also want to set some sensible macOS defaults
 ./macos.sh
 ```
 
-### CTF tools
-
-CTF tools are in a separate `Brewfile.ctf` and can be installed on-demand:
-
-```bash
-brew bundle --no-lock --file=Brewfile.ctf
-```
-
 ## Thanks to...
 
 - [Mathias Bynens](https://mathiasbynens.be) and his original [dotfiles repository](https://github.com/mathiasbynens/dotfiles).
