@@ -2,29 +2,31 @@
 
 ## Installation
 
-You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.)
+Clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.)
 
 ```bash
 git clone https://github.com/olistic/dotfiles.git
 ```
 
-### Homebrew formulae
+### Install
 
-When setting up a new Mac, you may want to start by installing some common [Homebrew](https://brew.sh/) formulae, casks, and VS Code extensions.
-
-The installation script will install Homebrew with everything inside of `Brewfile`, and set up runtimes (Node.js, Python, Rust, Java) via [mise](https://mise.jdx.dev).
+The installation script will install [Homebrew](https://brew.sh/) with everything in the `Brewfile`, and set up runtimes (Node.js, Python, Rust, Java, Foundry) via [mise](https://mise.jdx.dev).
 
 ```bash
 ./install.sh
 ```
 
-### Dotfiles
+### Bootstrap
 
 The bootstrapper script will symlink the dotfiles to your home folder.
 
 ```bash
 source bootstrap.sh
 ```
+
+### Terminal font
+
+Set your terminal font to **JetBrainsMono Nerd Font** for Starship prompt icons and ligatures. In iTerm2: Settings > Profiles > Text > Font.
 
 ### SSH key
 
@@ -53,27 +55,11 @@ The shared `.gitconfig` uses `[include]` to pull in `~/.gitconfig.local` for use
 	signingkey = ~/.ssh/id_ed25519.pub
 ```
 
-### Specify the `$PATH`
-
-If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/olistic/dotfiles/blob/9b71a58e23f8732dcd3ceb31ea4464696d599eeb/.aliases#L19-L26)) takes place.
-
-Here's an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
-
-```bash
-export PATH="/usr/local/bin:$PATH"
-```
-
-### Add custom commands
+### Custom commands
 
 If `~/.extra` exists, it will be sourced along with the other files. You can use this to add commands and environment variables you don't want to commit to a public repository.
 
-You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It's probably better to [fork this repository](https://github.com/olistic/dotfiles/fork) instead, though.
-
-### Terminal font
-
-Set your terminal font to **JetBrainsMono Nerd Font** for Starship prompt icons and ligatures. In iTerm2: Settings > Profiles > Text > Font.
-
-### Sensible macOS defaults
+### macOS defaults
 
 When setting up a new Mac, you may also want to set some sensible macOS defaults:
 
@@ -89,6 +75,6 @@ CTF tools are in a separate `Brewfile.ctf` and can be installed on-demand:
 brew bundle --no-lock --file=Brewfile.ctf
 ```
 
-## Thanks to…
+## Thanks to...
 
-- [Mathias Bynens](https://mathiasbynens.be/) and his original [dotfiles repository](https://github.com/mathiasbynens/dotfiles).
+- [Mathias Bynens](https://mathiasbynens.be) and his original [dotfiles repository](https://github.com/mathiasbynens/dotfiles).
