@@ -5,11 +5,6 @@ export EDITOR='vim';
 export NODE_REPL_HISTORY=~/.node_history;
 # Allow 32³ entries; the default is 1000.
 export NODE_REPL_HISTORY_SIZE='32768';
-# Use sloppy mode by default, matching web browsers.
-export NODE_REPL_MODE='sloppy';
-
-# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
-export PYTHONIOENCODING='UTF-8';
 
 # Increase Zsh history size. Allow 32³ entries; the default is 1000.
 export HISTFILE=~/.histfile
@@ -20,11 +15,8 @@ export SAVEHIST="${HISTSIZE}";
 export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
 
-# Highlight section titles in manual pages.
-export LESS_TERMCAP_md=$'\e[1;33m';
-
-# Don’t clear the screen after quitting a manual page.
-export MANPAGER='less -X';
+# Use bat for man pages.
+export MANPAGER="sh -c ‘col -bx | bat -l man -p’";
 
 # Compilation flags.
 export ARCHFLAGS="-arch arm64";
