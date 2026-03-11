@@ -79,9 +79,8 @@
 	# Use delta for better diffs
 	pager = delta
 
-	# Use custom `.gitignore` and `.gitattributes`
+	# Use custom `.gitignore`
 	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
 
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error
 	# [default] trailing-space: looks for spaces at the end of a line
@@ -137,7 +136,6 @@
 
 [credential]
 
-	# Use the OSX Keychain to store the GitHub password
 	helper = osxkeychain
 
 [diff]
