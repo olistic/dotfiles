@@ -70,5 +70,6 @@
     "security-guidance@claude-plugins-official": true
   },
   "fastMode": true,
-  "teammateMode": "tmux"
+  "teammateMode": "tmux",
+  "voiceEnabled": true
 }
