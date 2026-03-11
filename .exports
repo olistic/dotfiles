@@ -20,3 +20,6 @@ export MANPAGER="sh -c ‘col -bx | bat -l man -p’";
 
 # Compilation flags.
 export ARCHFLAGS="-arch arm64";
+
+# Disable Turbo telemetry.
+export TURBO_TELEMETRY_DISABLED=1;
