@@ -1,0 +1,26 @@
+# CTF tools; see https://github.com/ctfs/write-ups.
+# Install with: brew bundle --file=Brewfile.ctf
+
+brew 'aircrack-ng'
+brew 'bfg'
+brew 'binutils'
+brew 'binwalk'
+brew 'cifer'
+brew 'dex2jar'
+brew 'dns2tcp'
+brew 'fcrackzip'
+brew 'foremost'
+brew 'hydra'
+brew 'john'
+brew 'knock'
+brew 'netpbm'
+brew 'nmap'
+brew 'pngcheck'
+brew 'socat'
+brew 'sqlmap'
+brew 'tcpflow'
+brew 'tcpreplay'
+brew 'tcptrace'
+brew 'ucspi-tcp' # `tcpserver` etc.
+brew 'xpdf'
+brew 'xz'
