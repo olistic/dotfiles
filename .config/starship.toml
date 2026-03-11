@@ -4,42 +4,62 @@
 format = """
 $directory\
 $git_branch\
+$git_state\
 $git_status\
 $line_break\
 $character"""
 
 right_format = """
+$package\
 $nodejs\
 $rust\
 $python\
 $java\
+$solidity\
 $cmd_duration"""
 
 [directory]
 style = "blue"
+truncate_to_repo = true
 
 [git_branch]
+symbol = ""
 style = "gray"
+
+[git_state]
+style = "bold yellow"
 
 [git_status]
 style = "red"
 
+[git_metrics]
+disabled = false
+added_style = "green"
+deleted_style = "red"
+
 [character]
-success_symbol = "[>](purple)"
-error_symbol = "[>](red)"
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](purple)"
+
+[package]
+style = "208"
 
 [cmd_duration]
-min_time = 5_000
+min_time = 2_000
 style = "yellow"
 
 [nodejs]
 style = "green"
 
+[python]
+style = "yellow"
+
 [rust]
 style = "red"
 
-[python]
-style = "yellow"
+[solidity]
+style = "blue"
 
 [java]
 style = "red"
