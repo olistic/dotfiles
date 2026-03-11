@@ -14,7 +14,6 @@ SYMLINKS=(
   .path
   .vim
   .vimrc
-  .wgetrc
   .zshrc
 )
 

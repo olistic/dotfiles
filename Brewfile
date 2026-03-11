@@ -59,9 +59,6 @@ brew 'zsh-autosuggestions'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 
-# Install `wget`.
-brew 'wget'
-
 # Install more recent versions of some macOS tools.
 brew 'vim'
 brew 'screen'
