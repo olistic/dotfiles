@@ -49,17 +49,6 @@ cask 'spotify'
 # Command-line tools                                                          #
 ###############################################################################
 
-# Install GNU core utilities (those that come with macOS are outdated).
-# Don't forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-brew 'coreutils'
-
-# Install some other useful utilities like `sponge`.
-brew 'moreutils'
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
-brew 'findutils'
-# Install GNU `sed`, `g`-prefixed.
-brew 'gnu-sed'
-
 # Install GnuPG.
 brew 'gnupg'
 brew 'pinentry-mac'
@@ -75,7 +64,6 @@ brew 'wget'
 
 # Install more recent versions of some macOS tools.
 brew 'vim'
-brew 'grep'
 brew 'screen'
 brew 'php'
 brew 'gmp'
