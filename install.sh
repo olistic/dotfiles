@@ -37,8 +37,8 @@ brew cleanup
 # Install and use latest release of Node.js.
 mise use --global node@latest
 
-# Enable corepack.
-corepack enable
+# Install pnpm.
+mise use --global pnpm@latest
 
 # Install TypeScript language server.
 npm install -g typescript-language-server typescript
