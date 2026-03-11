@@ -53,7 +53,7 @@ cask 'spotify'
 brew 'gnupg'
 brew 'pinentry-mac'
 
-# Install Zsh 5.
+# Install Zsh and plugins.
 brew 'zsh'
 brew 'zsh-autosuggestions'
 brew 'zsh-completions'
@@ -61,9 +61,6 @@ brew 'zsh-syntax-highlighting'
 
 # Install more recent versions of some macOS tools.
 brew 'vim'
-brew 'screen'
-brew 'php'
-brew 'gmp'
 
 # Install modern CLI replacements.
 brew 'bat'
@@ -75,16 +72,11 @@ brew 'jq'
 brew 'ripgrep'
 
 # Install other useful binaries.
-brew 'ack'
 brew 'gh'
 brew 'ghostscript'
 brew 'git'
 brew 'git-lfs'
 brew 'imagemagick'
-brew 'lua'
-brew 'lynx'
-brew 'p7zip'
-brew 'pigz'
 brew 'poppler'
 brew 'mise'
 brew 'uv'
@@ -95,9 +87,7 @@ brew 'rename'
 brew 'ssh-copy-id'
 brew 'tesseract-lang'
 brew 'tree'
-brew 'vbindiff'
 brew 'watchman'
-brew 'zopfli'
 brew 'zoxide'
 
 # Install mobile development tools.
