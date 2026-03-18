@@ -64,7 +64,7 @@ uv tool install it2
 mise use --global rust@latest
 
 # Install Rust language server.
-cargo install rust-analyzer
+rustup component add rust-analyzer
 
 ###############################################################################
 # Java (via mise)                                                             #
