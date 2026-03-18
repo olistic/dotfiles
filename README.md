@@ -40,8 +40,8 @@ gh ssh-key add ~/.ssh/id_ed25519.pub --title "my-mac (signing)" --type signing
 
 Create `~/.ssh/allowed_signers` for local signature verification:
 
-```
-your@email.com ssh-ed25519 AAAA...
+```bash
+echo "$(git config user.email) $(cat ~/.ssh/id_ed25519.pub)" > ~/.ssh/allowed_signers
 ```
 
 ### Local git config
