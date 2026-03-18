@@ -5,6 +5,7 @@ DOTFILES_DIR="$(cd "$(dirname "${0}")" && pwd)"
 # Files and directories to symlink to ~.
 SYMLINKS=(
   .aliases
+  .duti
   .editorconfig
   .exports
   .gitconfig

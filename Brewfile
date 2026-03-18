@@ -71,6 +71,9 @@ brew 'fzf'
 brew 'jq'
 brew 'ripgrep'
 
+# Install default app handler.
+brew 'duti'
+
 # Install other useful binaries.
 brew 'gh'
 brew 'ghostscript'

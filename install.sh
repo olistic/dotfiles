@@ -86,3 +86,16 @@ mise use --global foundry@latest
 
 # Install dotfiles.
 ./bootstrap.sh -f
+
+###############################################################################
+# Default applications (via duti)                                             #
+###############################################################################
+
+# Apply default app associations.
+if command -v duti > /dev/null && [[ -f ~/.duti ]]; then
+  while IFS= read -r line; do
+    # Skip comments and empty lines.
+    [[ "$line" =~ ^#.*$ || -z "$line" ]] && continue
+    duti -s $line
+  done < ~/.duti
+fi

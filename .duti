@@ -1,0 +1,33 @@
+# Default applications for file types.
+# Format: bundle_id  UTI/extension  role
+#
+# Roles: all, viewer, editor, shell, none
+# See `man duti` for more info.
+
+# Source code → Zed
+dev.zed.Zed  .css       all
+dev.zed.Zed  .csv       all
+dev.zed.Zed  .env       all
+dev.zed.Zed  .html      all
+dev.zed.Zed  .js        all
+dev.zed.Zed  .json      all
+dev.zed.Zed  .jsx       all
+dev.zed.Zed  .lock      all
+dev.zed.Zed  .log       all
+dev.zed.Zed  .markdown  all
+dev.zed.Zed  .md        all
+dev.zed.Zed  .py        all
+dev.zed.Zed  .rs        all
+dev.zed.Zed  .sh        all
+dev.zed.Zed  .sol       all
+dev.zed.Zed  .toml      all
+dev.zed.Zed  .ts        all
+dev.zed.Zed  .tsx       all
+dev.zed.Zed  .txt       all
+dev.zed.Zed  .xml       all
+dev.zed.Zed  .yaml      all
+dev.zed.Zed  .yml       all
+dev.zed.Zed  .zsh       all
+
+# PDFs → Preview
+com.apple.Preview  .pdf  all
