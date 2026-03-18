@@ -8,7 +8,6 @@
 dev.zed.Zed  .css       all
 dev.zed.Zed  .csv       all
 dev.zed.Zed  .env       all
-dev.zed.Zed  .html      all
 dev.zed.Zed  .js        all
 dev.zed.Zed  .json      all
 dev.zed.Zed  .jsx       all
