@@ -29,5 +29,12 @@ dev.zed.Zed  .yaml      all
 dev.zed.Zed  .yml       all
 dev.zed.Zed  .zsh       all
 
+# Videos → IINA
+com.colliderli.iina  .avi  all
+com.colliderli.iina  .mkv  all
+com.colliderli.iina  .mov  all
+com.colliderli.iina  .mp4  all
+com.colliderli.iina  .webm all
+
 # PDFs → Preview
 com.apple.Preview  .pdf  all

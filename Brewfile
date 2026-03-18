@@ -39,6 +39,9 @@ cask 'nordvpn'
 # Install fonts.
 cask 'font-jetbrains-mono-nerd-font'
 
+# Install media players.
+cask 'iina'
+
 # Install other useful stuff.
 cask '1password'
 cask 'macwhisper'
