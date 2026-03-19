@@ -68,7 +68,16 @@
     "typescript-lsp@claude-plugins-official": true,
     "figma@claude-plugins-official": true,
     "vercel@claude-plugins-official": true,
-    "security-guidance@claude-plugins-official": true
+    "security-guidance@claude-plugins-official": true,
+    "doit@doit": true
+  },
+  "extraKnownMarketplaces": {
+    "doit": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/olistic/doit.git"
+      }
+    }
   },
   "fastMode": true,
   "voiceEnabled": true,
