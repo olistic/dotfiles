@@ -80,6 +80,18 @@
       }
     }
   },
+  "sandbox": {
+    "enabled": true,
+    "autoAllow": true,
+    "filesystem": {
+      "denyRead": [
+        "~/.extra",
+        "~/.gitconfig.local",
+        "~/.gnupg/private-keys-v1.d",
+        "~/.ssh/id_*"
+      ]
+    }
+  },
   "fastMode": true,
   "voiceEnabled": true,
   "teammateMode": "tmux"
