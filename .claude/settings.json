@@ -85,15 +85,6 @@
       }
     }
   },
-  "sandbox": {
-    "enabled": true,
-    "autoAllow": true,
-    "filesystem": {
-      "denyRead": [
-        "~/.extra"
-      ]
-    }
-  },
   "fastMode": true,
   "voiceEnabled": true,
   "teammateMode": "tmux"
