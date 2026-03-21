@@ -7,11 +7,11 @@
 ## Preferences
 
 - Don't add emojis unless asked
-- Be concise — lead with the answer, not the reasoning
+- Lead with the answer, not the reasoning — keep responses short and direct
 - When making changes, prefer atomic commits over large batches
 - Ask before making destructive or hard-to-reverse operations
 - Default to TypeScript when the language isn't specified or obvious from context
-- When unsure about intent, ask — don't guess
+- When a task has multiple reasonable interpretations, ask — don't guess
 
 ## Tool usage
 
