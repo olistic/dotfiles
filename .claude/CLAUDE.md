@@ -10,6 +10,8 @@
 - Be concise — lead with the answer, not the reasoning
 - When making changes, prefer atomic commits over large batches
 - Ask before making destructive or hard-to-reverse operations
+- Default to TypeScript when the language isn't specified or obvious from context
+- When unsure about intent, ask — don't guess
 
 ## Tool usage
 
