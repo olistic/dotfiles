@@ -86,7 +86,6 @@
     "filesystem": {
       "denyRead": [
         "~/.extra",
-        "~/.gitconfig.local",
         "~/.gnupg/private-keys-v1.d",
         "~/.ssh/id_*"
       ]
