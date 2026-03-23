@@ -1,0 +1,20 @@
+# Font
+font-family = JetBrains Mono
+font-size = 14
+
+# Theme — auto-switches with macOS appearance
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+background-opacity = 0.95
+background-blur = true
+
+# Window
+window-padding-x = 8
+window-padding-y = 4
+macos-titlebar-style = tabs
+
+# Cursor
+cursor-style = bar
+cursor-style-blink = false
+
+# Clipboard
+copy-on-select = clipboard

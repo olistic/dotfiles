@@ -22,7 +22,10 @@ SYMLINKS=(
 DIR_SYMLINKS=(
   .claude/CLAUDE.md
   .claude/settings.json
+  .config/ghostty/config
   .config/starship.toml
+  .config/zed/keymap.json
+  .config/zed/settings.json
   .gnupg/gpg-agent.conf
   .ssh/config
 )
