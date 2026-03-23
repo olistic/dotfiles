@@ -14,7 +14,7 @@ cask 'codex'
 cask 'conductor'
 cask 'zed'
 cask 'docker-desktop'
-cask 'iterm2'
+cask 'ghostty'
 cask 'postman'
 
 # Install productivity tools.
@@ -77,10 +77,19 @@ brew 'ripgrep'
 # Install default app handler.
 brew 'duti'
 
+# Install linters and code quality tools.
+brew 'actionlint'
+brew 'ast-grep'
+brew 'oxlint'
+brew 'shellcheck'
+brew 'shfmt'
+brew 'zizmor'
+
 # Install other useful binaries.
 brew 'gh'
 brew 'ghostscript'
 brew 'git'
+brew 'macos-trash'
 brew 'git-lfs'
 brew 'imagemagick'
 brew 'poppler'

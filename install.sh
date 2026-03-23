@@ -53,9 +53,6 @@ mise use --global python@latest
 # Install Python language server.
 uv tool install pyright
 
-# Install other tools.
-uv tool install it2
-
 ###############################################################################
 # Rust (via mise)                                                             #
 ###############################################################################
