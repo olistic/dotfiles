@@ -30,6 +30,7 @@
       "Bash(npm run build:*)",
       "Bash(npm run lint:*)",
       "Bash(npm run test:*)",
+      "Bash(npm run typecheck:*)",
       "Bash(npm test:*)",
       "Bash(npm view:*)",
       "Bash(npx biome:*)",
@@ -45,6 +46,7 @@
       "Bash(pnpm run build:*)",
       "Bash(pnpm run lint:*)",
       "Bash(pnpm run test:*)",
+      "Bash(pnpm run typecheck:*)",
       "Bash(pnpm test:*)",
       "Bash(pnpm tsc --noEmit *)",
       "Bash(pnpm view:*)",
@@ -57,6 +59,7 @@
       "Bash(yarn run build:*)",
       "Bash(yarn run lint:*)",
       "Bash(yarn run test:*)",
+      "Bash(yarn run typecheck:*)",
       "Bash(yarn test:*)"
     ],
     "deny": [
