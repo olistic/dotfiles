@@ -23,9 +23,6 @@
   // Editor
   "tab_size": 2,
   "vertical_scroll_margin": 5,
-  "inlay_hints": {
-    "enabled": true,
-  },
   "tabs": {
     "file_icons": true,
     "git_status": true,
