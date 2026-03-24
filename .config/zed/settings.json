@@ -44,8 +44,9 @@
   // AI
   "agent": {
     "default_model": {
-      "provider": "anthropic",
-      "model": "claude-opus-4-6-1m-context-latest",
+      "enable_thinking": true,
+      "provider": "openai",
+      "model": "gpt-5.3-codex",
     },
     "favorite_models": [],
     "model_parameters": [],
