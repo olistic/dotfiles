@@ -14,7 +14,6 @@ $rust\
 $python\
 $java\
 $solidity\
-$cmd_duration\
 $line_break\
 $character"""
 
@@ -46,11 +45,6 @@ vimcmd_symbol = "[❮](purple)"
 
 [package]
 style = "208"
-
-[cmd_duration]
-min_time = 2_000
-format = " took [$duration]($style)"
-style = "yellow"
 
 [nodejs]
 style = "green"
