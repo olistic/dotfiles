@@ -6,21 +6,20 @@ $directory\
 $git_branch\
 $git_state\
 $git_status\
-$line_break\
-$character"""
-
-right_format = """
+$git_metrics\
+$fill\
 $package\
 $nodejs\
 $rust\
 $python\
 $java\
 $solidity\
-$cmd_duration"""
+$cmd_duration\
+$line_break\
+$character"""
 
 [directory]
 style = "blue"
-truncate_to_repo = true
 
 [git_branch]
 symbol = ""
@@ -37,6 +36,9 @@ disabled = false
 added_style = "green"
 deleted_style = "red"
 
+[fill]
+symbol = " "
+
 [character]
 success_symbol = "[❯](purple)"
 error_symbol = "[❯](red)"
@@ -47,6 +49,7 @@ style = "208"
 
 [cmd_duration]
 min_time = 2_000
+format = " took [$duration]($style)"
 style = "yellow"
 
 [nodejs]
