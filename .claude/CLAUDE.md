@@ -30,34 +30,11 @@
 
 ## Comments
 
-Only add a comment when it explains *why*, not *what*. Good reasons to comment:
-
-- Non-obvious behavior (e.g., why a catch block swallows an error)
-- Security rationale (e.g., why env vars are restricted)
-- External API quirks (e.g., Fly's 408 on wait timeout)
-- Ordering constraints (e.g., attach logs before starting container)
-- Labeled strategies or steps in a multi-branch algorithm
-
-Do not comment:
-
-- Section headers that just name the variable/block below them
-- Lines that duplicate an adjacent log message
-- Self-evident operations (`// Create temp directory` above `mkdtemp`)
-- Mock labels in tests unless the sequence is non-obvious
-
-Style:
-
-- JSDoc (`/** */`) for exported functions, public methods, and interface fields
-- Inline `//` for everything else, on the line above the code (not end-of-line), except for unit-clarifying suffixes like `// 24 hours`
-- Keep comments terse — one line when possible
-- In tests, comment async flow (`// Flush microtasks so X resolves before Y.`) and test-ordering dependencies
-
-Grammar:
-
-- Capitalize the first word and any proper nouns (e.g. Claude, GitHub)
-- End sentences and imperatives with a period
-- Short labels in test mock sequences (e.g., `// Create Machine`, `// Wait for stopped`) don't need a period
-- Unit suffixes (e.g., `// 24 hours`) and transformation labels (e.g., `// Bold: **text** → *text*`) don't need a period
+- ONLY add a comment when it explains *why*, not *what*
+- Do NOT comment self-evident operations, duplicate adjacent log messages, or section headers that just name the variable/block below them
+- Use JSDoc (`/** */`) for exported functions, public methods, and interface fields
+- Inline `//` on the line above the code, except for unit-clarifying suffixes like `// 24 hours`
+- Capitalize the first word; end sentences with a period
 
 ## Tool usage
 
