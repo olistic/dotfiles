@@ -22,6 +22,10 @@
 - NEVER push directly to main/master — use feature branches
 - NEVER commit secrets, credentials, or tokens
 
+## Naming
+
+- Do NOT use abbreviations for variable names — spell them out for clarity (exceptions: universally understood short forms like `args`, `ctx`, `err`, `i`, `j`, `params`, `props`, `ref`)
+
 ## Hard limits
 
 - 100 lines per function max
