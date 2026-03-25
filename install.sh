@@ -31,11 +31,14 @@ brew bundle
 brew cleanup
 
 ###############################################################################
-# Node.js (via mise)                                                          #
+# JavaScript runtimes (via mise)                                              #
 ###############################################################################
 
 # Install and use latest release of Node.js.
 mise use --global node@latest
+
+# Install and use latest release of bun.
+mise use --global bun@latest
 
 # Install pnpm.
 mise use --global pnpm@latest
