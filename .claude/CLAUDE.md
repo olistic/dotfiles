@@ -65,3 +65,7 @@ Grammar:
 - Never use `grep` or `rg` via Bash — use the Grep tool
 - Never use `find` or `ls` via Bash to search for files — use the Glob tool
 - Reserve Bash for commands that genuinely require shell execution (git, npm, build tools, etc.)
+
+## Worktrees
+
+- Worktree directory: `.worktrees/` (local to each project root)

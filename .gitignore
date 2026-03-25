@@ -23,3 +23,6 @@ node_modules/
 
 # Claude Code
 .claude/settings.local.json
+
+# Git worktrees
+.worktrees/
