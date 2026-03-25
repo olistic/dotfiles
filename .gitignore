@@ -23,6 +23,7 @@ node_modules/
 
 # Claude Code
 .claude/settings.local.json
+.claude/TODOS.md  # Local TODOs, personal preference
 
 # Git worktrees
 .worktrees/
