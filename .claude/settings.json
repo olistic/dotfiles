@@ -31,6 +31,7 @@
       "Bash(gh run view:*)",
       "Bash(gh search:*)",
       "Bash(gh status:*)",
+      "Bash(git add:*)",
       "Bash(git branch:*)",
       "Bash(git check-ignore:*)",
       "Bash(git checkout -b:*)",
@@ -156,5 +157,6 @@
     "vercel@claude-plugins-official": true,
     "security-guidance@claude-plugins-official": true
   },
-  "teammateMode": "auto"
+  "teammateMode": "auto",
+  "model": "opus[1m]"
 }
