@@ -1,7 +1,7 @@
 ## Commands
 
 - `./bootstrap.sh` — symlink dotfiles to `~` (prompts for confirmation; use `-f` to skip)
-- `./install.sh` — install Homebrew, Brewfile, runtimes (Node.js, Python, Rust, Java, Foundry via mise), then runs bootstrap
+- `./install.sh` — install Homebrew, Brewfile, runtimes (Node.js, Bun, pnpm, Python, Rust, Java, Foundry via mise), then runs bootstrap
 - `./macos.sh` — apply macOS system defaults (requires sudo)
 
 ## Architecture
@@ -20,7 +20,13 @@
 - `.config/starship.toml` — prompt theme
 - `bootstrap.sh` — symlinks dotfiles to `~`
 - `install.sh` — installs Homebrew, Brewfile, runtimes via mise
+- `Brewfile` — Homebrew packages, casks, and Mac App Store apps
 - `macos.sh` — macOS defaults
+
+## Gotchas
+
+- `install.sh` is bash; `bootstrap.sh` is zsh — don't mix syntax assumptions
+- `.duti` application silently no-ops if `duti` isn't installed yet (it's in the Brewfile, so it works on full `install.sh` runs)
 
 ## Conventions
 
