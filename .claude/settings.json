@@ -123,6 +123,7 @@
       "Read(~/Library/Keychains/**)"
     ]
   },
+  "model": "opus[1m]",
   "enableAllProjectMcpServers": false,
   "hooks": {
     "PreToolUse": [
@@ -157,6 +158,6 @@
     "vercel@claude-plugins-official": true,
     "security-guidance@claude-plugins-official": true
   },
-  "teammateMode": "auto",
-  "model": "opus[1m]"
+  "effortLevel": "high",
+  "teammateMode": "auto"
 }
