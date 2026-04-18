@@ -1,5 +1,6 @@
 ## Preferences
 
+- NEVER use em dashes (—) — use commas, semicolons, parentheses, or separate sentences instead
 - Lead with the answer, not the reasoning — keep responses short and direct
 - When making changes, prefer atomic commits over large batches
 - Default to TypeScript when the language isn't specified or obvious from context
