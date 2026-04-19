@@ -21,6 +21,7 @@ SYMLINKS=(
 # These directories must not be symlinked wholesale.
 DIR_SYMLINKS=(
   .claude/CLAUDE.md
+  .claude/commands
   .claude/settings.json
   .config/ghostty/config
   .config/starship.toml
