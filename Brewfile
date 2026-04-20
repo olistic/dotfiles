@@ -21,6 +21,7 @@ cask 'postman'
 cask 'caffeine'
 cask 'loom'
 cask 'notion'
+cask 'obsidian'
 cask 'raycast'
 cask 'zoom'
 
