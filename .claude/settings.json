@@ -160,6 +160,5 @@
     "vercel@claude-plugins-official": true,
     "security-guidance@claude-plugins-official": true
   },
-  "effortLevel": "high",
   "teammateMode": "auto"
 }
