@@ -37,7 +37,7 @@
 ## Comments
 
 - Only add a comment when it explains *why*, not *what*
-- Do NOT comment self-evident operations, duplicate adjacent log messages, section headers that just name the variable/block below them, or separator lines (`// ---`, `// ===`, `// ****`)
+- Do NOT comment self-evident operations, duplicate adjacent log messages, section headers that just name the variable/block below them, or separator lines (e.g. `// ---`)
 - Use JSDoc (`/** */`) for exported functions, public methods, and interface fields
 - Inline `//` on the line above the code, except for unit-clarifying suffixes like `// 24 hours`
 - Capitalize the first word; end sentences with a period
