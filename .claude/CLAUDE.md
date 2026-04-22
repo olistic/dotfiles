@@ -21,7 +21,7 @@
 - One logical change per commit
 - NEVER push directly to main/master — use feature branches
 - NEVER commit secrets, credentials, or tokens
-- Only use `--amend --no-edit` when fixing a change from the immediately preceding commit — otherwise create a new commit
+- `--amend --no-edit` is ONLY for fixing a typo or mistake in the immediately preceding commit (same logical concern). Follow-up changes — even small ones — ALWAYS get a new commit.
 
 ## Naming
 
