@@ -8,6 +8,19 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // Appearance
+  "cli_default_open_behavior": "new_window",
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "theme": {
     "mode": "system",
     "light": "Catppuccin Latte",
@@ -40,6 +53,7 @@
 
   // AI
   "agent": {
+    "dock": "right",
     "default_model": {
       "enable_thinking": true,
       "provider": "openai",
