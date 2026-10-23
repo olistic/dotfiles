@@ -43,8 +43,10 @@ mise use --global bun@latest
 # Install pnpm.
 mise use --global pnpm@latest
 
-# Install TypeScript language server.
-npm install -g typescript-language-server typescript
+# Install TypeScript language server. Installed through mise rather than
+# `npm install -g` so it survives Node.js upgrades, which relocate the global
+# prefix and orphan anything installed into the previous one.
+mise use --global npm:typescript-language-server npm:typescript
 
 ###############################################################################
 # Python (via mise)                                                           #
