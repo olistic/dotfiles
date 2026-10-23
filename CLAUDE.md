@@ -20,13 +20,17 @@
 - `.config/starship.toml` — prompt theme
 - `bootstrap.sh` — symlinks dotfiles to `~`
 - `install.sh` — installs Homebrew, Brewfile, runtimes via mise
-- `Brewfile` — Homebrew packages, casks, and Mac App Store apps
+- `Brewfile` — Homebrew packages and casks
 - `macos.sh` — macOS defaults
+- `.githooks/pre-commit` — gitleaks secret scan, shared by every repo via `core.hooksPath`
+- `.github/workflows/lint.yml` — shellcheck, zsh parse-check, JSON validation, secret scan
 
 ## Gotchas
 
 - `install.sh` is bash; `bootstrap.sh` is zsh — don't mix syntax assumptions
 - `.duti` application silently no-ops if `duti` isn't installed yet (it's in the Brewfile, so it works on full `install.sh` runs)
+- `core.hooksPath` is global, so `.githooks/pre-commit` runs in **every** repo. Repos that set their own `core.hooksPath` (husky) override it, but repos relying on `.git/hooks/` will not run those hooks
+- The pre-commit hook no-ops with a warning when `gitleaks` is missing, so a machine without it silently loses secret scanning
 
 ## Conventions
 
