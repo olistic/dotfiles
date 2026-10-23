@@ -1,0 +1,38 @@
+name: Lint
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Lint bash scripts
+        run: shellcheck install.sh macos.sh
+
+      # Sourced fragments have no shebang, so shellcheck needs the dialect
+      # named explicitly. This is where the curly-quote MANPAGER bug lived.
+      - name: Lint sourced shell fragments
+        run: shellcheck --shell=bash .aliases .exports .path
+
+      - name: Install zsh
+        run: sudo apt-get update && sudo apt-get install -y zsh
+
+      # shellcheck refuses zsh (SC1071), so parse-check these instead.
+      - name: Syntax-check zsh scripts
+        run: |
+          zsh -n bootstrap.sh
+          zsh -n .zshrc
+
+      - name: Validate JSON
+        run: jq -e . .claude/settings.json > /dev/null
