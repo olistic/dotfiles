@@ -98,6 +98,8 @@ if command -v duti > /dev/null && [[ -f ~/.duti ]]; then
   while IFS= read -r line; do
     # Skip comments and empty lines.
     [[ "$line" =~ ^#.*$ || -z "$line" ]] && continue
+    # Word splitting is intentional: each line holds three duti arguments.
+    # shellcheck disable=SC2086
     duti -s $line
   done < ~/.duti
 fi
