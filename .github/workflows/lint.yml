@@ -16,9 +16,11 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+          # Full history so the secret scan can see every commit, not just HEAD.
+          fetch-depth: 0
 
       - name: Lint bash scripts
-        run: shellcheck install.sh macos.sh
+        run: shellcheck install.sh macos.sh .githooks/pre-commit
 
       # Sourced fragments have no shebang, so shellcheck needs the dialect
       # named explicitly. This is where the curly-quote MANPAGER bug lived.
@@ -36,3 +38,14 @@ jobs:
 
       - name: Validate JSON
         run: jq -e . .claude/settings.json > /dev/null
+
+      # Backstop for the pre-commit hook, which `--no-verify` can skip.
+      - name: Install gitleaks
+        env:
+          GITLEAKS_VERSION: 8.30.1
+        run: |
+          curl -sSfL "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" \
+            | sudo tar -xz -C /usr/local/bin gitleaks
+
+      - name: Scan history for secrets
+        run: gitleaks git --redact --no-banner .
