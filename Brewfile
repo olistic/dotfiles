@@ -60,7 +60,6 @@ brew 'pinentry-mac'
 # Install Zsh and plugins.
 brew 'zsh'
 brew 'zsh-autosuggestions'
-brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 
 # Install more recent versions of some macOS tools.
