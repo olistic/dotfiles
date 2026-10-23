@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Block commits that contain secrets. Git history is forever and several of
+# these repos are public, so a committed credential has to be rotated, not
+# just deleted. Bypass with --no-verify only for a confirmed false positive.
+
+set -euo pipefail
+
+if ! command -v gitleaks > /dev/null; then
+  echo "pre-commit: gitleaks not installed, skipping secret scan" >&2
+  exit 0
+fi
+
+gitleaks git --staged --redact --no-banner

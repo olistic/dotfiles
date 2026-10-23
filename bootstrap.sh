@@ -9,6 +9,7 @@ SYMLINKS=(
   .editorconfig
   .exports
   .gitconfig
+  .githooks
   .gitignore
   .hushlogin
   .path

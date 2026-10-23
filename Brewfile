@@ -80,6 +80,7 @@ brew 'duti'
 # Install linters and code quality tools.
 brew 'actionlint'
 brew 'ast-grep'
+brew 'gitleaks'
 brew 'oxlint'
 brew 'shellcheck'
 brew 'shfmt'
