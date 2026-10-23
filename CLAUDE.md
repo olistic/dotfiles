@@ -7,7 +7,7 @@
 ## Architecture
 
 - Dotfiles are **symlinked** from this repo to `~` via `bootstrap.sh`
-- Directories with runtime state (`.gnupg`, `.ssh`) are NOT symlinked wholesale — only individual config files inside them are
+- Directories with runtime state (`.ssh`) are NOT symlinked wholesale — only individual config files inside them are
 - Machine-specific config goes in untracked local files, not in the repo
 
 ## Key files

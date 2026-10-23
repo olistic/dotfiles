@@ -28,7 +28,6 @@ DIR_SYMLINKS=(
   .config/starship.toml
   .config/zed/keymap.json
   .config/zed/settings.json
-  .gnupg/gpg-agent.conf
   .ssh/config
 )
 

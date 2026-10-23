@@ -53,10 +53,6 @@ cask 'spotify'
 # Command-line tools                                                          #
 ###############################################################################
 
-# Install GnuPG.
-brew 'gnupg'
-brew 'pinentry-mac'
-
 # Install Zsh and plugins.
 brew 'zsh'
 brew 'zsh-autosuggestions'
