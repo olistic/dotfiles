@@ -29,7 +29,7 @@ alias sudo='sudo '
 alias week='date +%V'
 
 # Get macOS Software Updates and update Homebrew packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mise upgrade'
 
 # Google Chrome
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
