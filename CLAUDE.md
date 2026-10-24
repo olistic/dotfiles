@@ -2,7 +2,7 @@
 
 - `./bootstrap.sh` — symlink dotfiles to `~` (prompts for confirmation; use `-f` to skip)
 - `./install.sh` — install Homebrew, Brewfile, runtimes (Node.js, Bun, pnpm, Python, Rust, Java, Foundry via mise), then runs bootstrap
-- `./macos.sh` — apply macOS system defaults (requires sudo)
+- `./macos.sh` — apply macOS user defaults (no sudo required)
 
 ## Architecture
 
