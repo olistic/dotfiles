@@ -35,7 +35,6 @@ eval "$(starship init zsh)"
 
 # Zsh plugins.
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Activate mise (manages Node.js, Python, Rust, Java, etc.).
 eval "$(mise activate zsh)"
@@ -48,3 +47,7 @@ export FZF_ALT_C_COMMAND='fd --type d --hidden --exclude .git'
 
 # Initialize zoxide (smarter cd).
 eval "$(zoxide init zsh)"
+
+# Must be sourced last: it wraps ZLE widgets, including the ones fzf binds
+# to Ctrl+R, Ctrl+T and Alt+C above.
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
