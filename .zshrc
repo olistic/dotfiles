@@ -21,7 +21,8 @@ for option in autocd extendedglob; do
   setopt $option 2> /dev/null;
 done;
 
-# Make Homebrew installation available.
+# Make Homebrew installation available. Also exports $HOMEBREW_PREFIX, which
+# the plugin paths below reuse instead of forking `brew --prefix` again.
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Initialize the completion system.
@@ -34,7 +35,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 eval "$(starship init zsh)"
 
 # Zsh plugins.
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Activate mise (manages Node.js, Python, Rust, Java, etc.).
 eval "$(mise activate zsh)"
@@ -50,4 +51,4 @@ eval "$(zoxide init zsh)"
 
 # Must be sourced last: it wraps ZLE widgets, including the ones fzf binds
 # to Ctrl+R, Ctrl+T and Alt+C above.
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
