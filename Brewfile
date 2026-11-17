@@ -22,7 +22,6 @@ cask 'postman'
 
 # Install productivity tools.
 cask 'caffeine'
-cask 'loom'
 cask 'notion'
 cask 'obsidian'
 cask 'raycast'
