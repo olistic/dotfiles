@@ -159,7 +159,8 @@
     "security-guidance@claude-plugins-official": true,
     "brave-search-skills@brave-search": true,
     "slack@claude-plugins-official": true,
-    "notion@claude-plugins-official": true
+    "notion@claude-plugins-official": true,
+    "postman@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "brave-search": {
