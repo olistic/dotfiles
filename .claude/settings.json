@@ -102,9 +102,6 @@
       "Bash(dd:*)",
       "Bash(*| bash)",
       "Bash(*| sh)",
-      "Bash(git push --force)",
-      "Bash(git push --force :*)",
-      "Bash(git push -f:*)",
       "Bash(git reset --hard:*)",
       "Edit(~/.bashrc)",
       "Edit(~/.zshrc)",
@@ -144,6 +141,15 @@
           {
             "type": "command",
             "command": "if echo \"$CLAUDE_TOOL_INPUT\" | grep -qE '\"command\"\\s*:\\s*\"git\\s+push\\b([^;&|\\\\]|\\\\\")*([[:space:]:+/]|\\\\\")(main|master)([[:space:]\\\\]|\"|$)'; then echo 'Use feature branches — do not push directly to main/master' >&2; exit 2; fi"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if jq -r '.tool_input.command // empty' | tr ';&|' '\\n\\n\\n' | grep -E '(^|[[:space:]])git[[:space:]]([^[:space:]]+[[:space:]]+)*push([[:space:]]|$)' | grep -qE \"[[:space:]][\\\"']?(--force|-[[:alnum:]]*f[[:alnum:]]*|\\+[^[:space:]]+)[\\\"']?([[:space:]]|$)\"; then echo 'Use --force-with-lease instead of --force, -f or a +refspec' >&2; exit 2; fi"
           }
         ]
       }
