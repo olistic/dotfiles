@@ -131,7 +131,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if echo \"$CLAUDE_TOOL_INPUT\" | grep -qE '\"command\"\\s*:\\s*\"rm\\s+-(rf|fr)\\s'; then echo 'Use trash instead of rm -rf' >&2; exit 2; fi"
+            "command": "if jq -r '.tool_input.command // empty' | tr ';&|' '\\n\\n\\n' | grep -qE '^[[:space:]]*rm[[:space:]]+-(rf|fr)[[:space:]]'; then echo 'Use trash instead of rm -rf' >&2; exit 2; fi"
           }
         ]
       },
@@ -140,7 +140,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if echo \"$CLAUDE_TOOL_INPUT\" | grep -qE '\"command\"\\s*:\\s*\"git\\s+push\\b([^;&|\\\\]|\\\\\")*([[:space:]:+/]|\\\\\")(main|master)([[:space:]\\\\]|\"|$)'; then echo 'Use feature branches — do not push directly to main/master' >&2; exit 2; fi"
+            "command": "if jq -r '.tool_input.command // empty' | tr ';&|' '\\n\\n\\n' | grep -E '(^|[[:space:]])git[[:space:]]([^[:space:]]+[[:space:]]+)*push([[:space:]]|$)' | grep -qE \"[[:space:]:+/\\\"'](main|master)([\\\"']|[[:space:]]|$)\"; then echo 'Use feature branches — do not push directly to main/master' >&2; exit 2; fi"
           }
         ]
       },
